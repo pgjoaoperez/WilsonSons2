@@ -1,0 +1,28 @@
+{
+    "Constants": {
+        "logF_BusinessProcessName": "",
+        "OrchestratorQueueName": "Criação do Sourcing",
+        "OrchestratorQueueFolder": "Wilson Sons",
+        "MaxRetryNumber":	0,
+        "ExScreenshotsFolderPath": "Exceptions_Screenshots",
+        "LogMessage_GetTransactionData": "Processing Transaction Number:",
+        "LogMessage_GetTransactionDataError": "Error getting transaction data for Transaction Number: ",
+        "LogMessage_Success": "Transaction Successful.",
+        "LogMessage_BusinessRuleException": "Business rule exception.",
+        "LogMessage_ApplicationException": "System exception."
+    },
+    "Settings": {
+        "CoupaURL": "https://wilsonsons-test.coupahost.com/sessions/support_login"
+    },
+
+    "Assets": {
+    },
+
+    "Credentials": {        
+        "LoginCoupa": {
+            "User": "userCoupa",
+            "Password": "passwordCoupa"
+        }
+    }
+
+}
