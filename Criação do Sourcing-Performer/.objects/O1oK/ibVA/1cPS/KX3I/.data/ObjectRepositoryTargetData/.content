@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="YNwgwDnO30St7DRtcXttVA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://wilsonsons-test.coupahost.com/sessions/support_login" DesignTimeRectangle="1131, 698, 314, 36" ElementType="InputBoxPassword" FriendlyName="'INPUT user_password'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname=' Senha  ' name='user[password]' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname=' Senha  ' name='user[password]' class='' /&gt;" Guid="5e57d495-fa16-47a8-942e-bcf7a3c7e413" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAT4AAAAoCAYAAABnwJYCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAERSURBVHhe7dYxqsQgGIXRt/+1pXYBAcEypZ3DD29CAtnA5J4DtxCx/fBvAYS5hW/OucYYq/duZvaKVdOqbVdn+I7jWNu2rX3fHx+bmf3iqmnVtmrc1xm+1trtAuAtqm3VuK8zfFVEgLe6Nk74gAjCB8QRPiCO8AFxhA+II3xAHOED4ggfEEf4gDjCB8QRPiCO8AFxhA+II3xAHOED4ggfEEf4gDjCB8QRPiCO8AFxhA+II3xAHOED4ggfEEf4gDjCB8QRPiCO8AFxhA+II3xAnMfwtdbWcRz/J4D3qLZV477O8NVFFXHf99V7NzN7xapp1bbrx+4MX5lzrjHG42Mzs19cNa3adnULH0AC4QPCrPUB/upf051xgcEAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Coupa Home' /&gt;" SearchSteps="Selector" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="67ad8173cbf967fa6a1b45a9ca518304.png" xmlns="">0hERwwSuA8UmOZxv1yUGSBA</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

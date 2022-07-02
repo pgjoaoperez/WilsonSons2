@@ -1,0 +1,16 @@
+﻿{
+  "Id": "KX3Ij729mkWgpgEQ-0eoYA",
+  "Reference": "FB9c7qXAV0OOXtfk_NLfvg/KX3Ij729mkWgpgEQ-0eoYA",
+  "ParentRef": "FB9c7qXAV0OOXtfk_NLfvg/1cPS0Ov55kWlDuA9UeCW4g",
+  "Name": "CoupaPassword",
+  "Type": "Element",
+  "TaxonomyType": "Elemento",
+  "Created": "2022-07-02T01:33:38.8250668Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-02T01:34:03.3768226Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

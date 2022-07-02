@@ -1,0 +1,15 @@
+﻿{
+  "Id": "1cPS0Ov55kWlDuA9UeCW4g",
+  "Reference": "FB9c7qXAV0OOXtfk_NLfvg/1cPS0Ov55kWlDuA9UeCW4g",
+  "ParentRef": "FB9c7qXAV0OOXtfk_NLfvg/ibVAZG2Wg0WNr03BANlTrw",
+  "Name": "CoupaLogin",
+  "Type": "Screen",
+  "Created": "2022-07-02T01:31:49.0426072Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-02T01:32:29.6025535Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
