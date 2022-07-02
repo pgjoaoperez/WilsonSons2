@@ -1,0 +1,16 @@
+﻿{
+  "Id": "zWcH_AKeWkyPbaG74sE9HA",
+  "Reference": "FB9c7qXAV0OOXtfk_NLfvg/zWcH_AKeWkyPbaG74sE9HA",
+  "ParentRef": "FB9c7qXAV0OOXtfk_NLfvg/1lbNw51Ayk-dt_-M_rqbfQ",
+  "Name": "CoupaRequests",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Created": "2022-07-02T01:50:48.3642267Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-02T01:51:11.8854069Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

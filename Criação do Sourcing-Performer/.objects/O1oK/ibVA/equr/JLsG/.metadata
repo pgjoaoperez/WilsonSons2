@@ -1,0 +1,16 @@
+﻿{
+  "Id": "JLsGqMeT5Uymi-3uq-MFcQ",
+  "Reference": "FB9c7qXAV0OOXtfk_NLfvg/JLsGqMeT5Uymi-3uq-MFcQ",
+  "ParentRef": "FB9c7qXAV0OOXtfk_NLfvg/equr5itN50-PUN7OTpCOZg",
+  "Name": "CoupaSearch",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Created": "2022-07-02T02:01:33.6085549Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-02T02:05:03.0754449Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

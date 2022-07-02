@@ -1,0 +1,15 @@
+﻿{
+  "Id": "equr5itN50-PUN7OTpCOZg",
+  "Reference": "FB9c7qXAV0OOXtfk_NLfvg/equr5itN50-PUN7OTpCOZg",
+  "ParentRef": "FB9c7qXAV0OOXtfk_NLfvg/ibVAZG2Wg0WNr03BANlTrw",
+  "Name": "CoupaRequisitions",
+  "Type": "Screen",
+  "Created": "2022-07-02T01:59:12.0530252Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-02T02:01:18.6720536Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
