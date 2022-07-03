@@ -1,0 +1,16 @@
+﻿{
+  "Id": "lFTPbtU2eUeCq05rT_vlEQ",
+  "Reference": "FB9c7qXAV0OOXtfk_NLfvg/lFTPbtU2eUeCq05rT_vlEQ",
+  "ParentRef": "FB9c7qXAV0OOXtfk_NLfvg/equr5itN50-PUN7OTpCOZg",
+  "Name": "CoupaSelectRequisitions",
+  "Type": "Element",
+  "TaxonomyType": "Elemento",
+  "Created": "2022-07-03T01:09:17.2091882Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-03T01:11:31.2419174Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1585,819</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2096,879</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CoupaRequisitions_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -82,23 +82,35 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CoupaRequisitions" sap:VirtualizedContainerService.HintSize="476,524" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CoupaRequisitions" sap:VirtualizedContainerService.HintSize="476,814" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="CoupaRequisitions" sap:VirtualizedContainerService.HintSize="434,432" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="3181ae52-93db-48d1-95f2-680ba303ba60" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="CoupaRequisitions" sap:VirtualizedContainerService.HintSize="434,722" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="3181ae52-93db-48d1-95f2-680ba303ba60" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DeselectAfter="False" DisplayName="Type Into 'CoupaSearch'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[in_requisicao + &quot;[k(enter)]&quot;]" Version="V1">
-            <uix:NTypeInto.Target>
-              <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/requisition_headers" ContentHash="Yeaum_Dga0uimZ8vqd8qIw" DesignTimeRectangle="1603, 355, 155, 25" ElementType="InputBox" FriendlyName="'INPUT sf_requisition_he…'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' class='search' id='sf_requisition_header' name='search' title='Requisitions' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='search' id='sf_requisition_header' name='search' title='Requisitions' aaname='' /&gt;" Guid="26b424f5-b085-4f9b-afbb-c470fa4a88e6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJ8AAAAdCAYAAAC0Y74zAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALYSURBVHhe7ZtPaxNBGMb7EfwofgOv3iL0rnfvexYPntbePQiyBC/mUPGQg8mlHuxFkDYH8VANVcomlFZpmxBKGfeZfWczs3/6Z5PMCnl+8NDMO9NQ6I/33V3YjVarpRimiVA+prE48nW7XTWZTBQhywZewS/bt0w+bBCyamwBM/nY8YgP4FlBPkJ8QfnIwrT3T9TT7m/18O0Pnec7sdqLp7JbDeUjtTmfXWXSbb4bqqB35Ej48eBMTpZD+UhtXu6OtWSvvhxLJeXgZJZJeF0HrCnfSPXDQAXBPNFAtnwx6qswCFV/JGvilfj8UsuFblcGBMQ+RnAVNeQT8dq2bQMV+RaQ8jUKRirk+vzrQipF0P02O0NZFakhX7loo16YE3LFUL5G2f7298axiq6IM1XUkK+s85Wg5TBjOSeJs2d/V/rdUTty6lpsczbsJ6dQFPl6ctb5HrJqIB3EgoRV4CYE3a+KGvIl5OQJe/n2k+uOAwgSJVUggmW+2R1MxDaCAed3k2VbJDN/gxFO1t6vPdeYx+8P9VjFXW8ePH6BnPhZRT35LOyu5MhmC5QXzkbL5cpny5zJlseRFjRw3bnGOI9ZEgF7yTXg/miqg5sM1LFfJqZhYfkMqYRph3LGpBUjlRbK1MOw0Pnm8hVlzKB8jXH552fW2TBaEXy2g+u968QDd5ev0NUEezxWnQF5aZw1O9//zvGHJ+pw656axV+1YHikAnDXCyERU7uJu8sn/2RXiFSaeS0nghZF1vbnhLQLVsvnSJ2guyrEpnxeuZqeqnHnkRq+2NCBgKgtQg35gMgGCSWF0SiSle3bYzca2NKUj1l3jIuIlM8bkOzo9f1MPGTcaTUlH1knTj89c8TD6F0GlI/cirj9QIt3tvdGKotD+citwIi9+L4tq+VA+UhjUD7SGAX5+A4H8UHpOxx8e434oPTtNSMgOyBZBfDKFg9x5GMYn6F8TENpqX8+j6a+k+BwVQAAAABJRU5ErkJggg==" InformativeScreenshot="7d71d4c6c4990a81278b20ddf6612134.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/JLsGqMeT5Uymi-3uq-MFcQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Requisitions' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete" />
-            </uix:NTypeInto.Target>
-          </uix:NTypeInto>
+          <Sequence DisplayName="Search Requisitions" sap:VirtualizedContainerService.HintSize="376,506" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DeselectAfter="False" DisplayName="Type Into 'CoupaSearch'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[in_requisicao + &quot;[k(enter)]&quot;]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/requisition_headers" ContentHash="Yeaum_Dga0uimZ8vqd8qIw" DesignTimeRectangle="1603, 355, 155, 25" ElementType="InputBox" FriendlyName="'INPUT sf_requisition_he…'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' class='search' id='sf_requisition_header' name='search' title='Requisitions' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='search' id='sf_requisition_header' name='search' title='Requisitions' aaname='' /&gt;" Guid="26b424f5-b085-4f9b-afbb-c470fa4a88e6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJ8AAAAdCAYAAAC0Y74zAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALYSURBVHhe7ZtPaxNBGMb7EfwofgOv3iL0rnfvexYPntbePQiyBC/mUPGQg8mlHuxFkDYH8VANVcomlFZpmxBKGfeZfWczs3/6Z5PMCnl+8NDMO9NQ6I/33V3YjVarpRimiVA+prE48nW7XTWZTBQhywZewS/bt0w+bBCyamwBM/nY8YgP4FlBPkJ8QfnIwrT3T9TT7m/18O0Pnec7sdqLp7JbDeUjtTmfXWXSbb4bqqB35Ej48eBMTpZD+UhtXu6OtWSvvhxLJeXgZJZJeF0HrCnfSPXDQAXBPNFAtnwx6qswCFV/JGvilfj8UsuFblcGBMQ+RnAVNeQT8dq2bQMV+RaQ8jUKRirk+vzrQipF0P02O0NZFakhX7loo16YE3LFUL5G2f7298axiq6IM1XUkK+s85Wg5TBjOSeJs2d/V/rdUTty6lpsczbsJ6dQFPl6ctb5HrJqIB3EgoRV4CYE3a+KGvIl5OQJe/n2k+uOAwgSJVUggmW+2R1MxDaCAed3k2VbJDN/gxFO1t6vPdeYx+8P9VjFXW8ePH6BnPhZRT35LOyu5MhmC5QXzkbL5cpny5zJlseRFjRw3bnGOI9ZEgF7yTXg/miqg5sM1LFfJqZhYfkMqYRph3LGpBUjlRbK1MOw0Pnm8hVlzKB8jXH552fW2TBaEXy2g+u968QDd5ev0NUEezxWnQF5aZw1O9//zvGHJ+pw656axV+1YHikAnDXCyERU7uJu8sn/2RXiFSaeS0nghZF1vbnhLQLVsvnSJ2guyrEpnxeuZqeqnHnkRq+2NCBgKgtQg35gMgGCSWF0SiSle3bYzca2NKUj1l3jIuIlM8bkOzo9f1MPGTcaTUlH1knTj89c8TD6F0GlI/cirj9QIt3tvdGKotD+citwIi9+L4tq+VA+UhjUD7SGAX5+A4H8UHpOxx8e434oPTtNSMgOyBZBfDKFg9x5GMYn6F8TENpqX8+j6a+k+BwVQAAAABJRU5ErkJggg==" InformativeScreenshot="7d71d4c6c4990a81278b20ddf6612134.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/JLsGqMeT5Uymi-3uq-MFcQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Requisitions' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'CoupaSelectRequisitions'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/requisition_headers" ContentHash="FvqvZ5R7jkCneFzHYNfGcg" DesignTimeRectangle="822, 404, 29, 15" ElementType="Text" FriendlyName="'3582'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl id='requisition_header_table_tag' tag='TABLE' /&gt;&lt;webctrl tableRow='2' aaname='{0}' colName='*Req #*' /&gt;&quot;, in_requisicao)]" FuzzySelectorArgument="&lt;webctrl id='requisition_header_table_tag' tag='TABLE' /&gt;&lt;webctrl parentid='drag_req_3582' tag='A' aaname='3582' colName='*Req #*' type='' class='' check:text='3582' /&gt;" Guid="4675907a-b653-474f-b31d-c53edfac29aa" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAATCAYAAAAeVmTJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAETSURBVEhL7ZLNDYMwDIWZkZm6Rc9ITMAIWYFrhYRAggsTuIl/iGMS6KniwCdFIjGxX/xcwQ14RAj3EzG5Aar3h9cIjs+RflSxsAZoFo55XKdi3cqngRVe+l47w8QRIYrAIrEwJlUXUGCSPIKx/V8qWrvNf2/QtPIdoL3NU7YjIyomS0HBKrHda1LBRFFEmohe8Op5a8h14rd/iaOI3XvtufHVr0NXsvcs2qrIhR2ccJmh9pf315l9Oj92DgSeB9OFQFlEMRkR7cq038zTmYDAiYhzb4MIEnglggUUBjUQRRj1OECyty/TVnlydkjRNJYn6QQV9pdwmQHDwhKzHeLCEt9ffRxoWtqqUzv+xyNCeEQQAF80/TSlScpuHAAAAABJRU5ErkJggg==" InformativeScreenshot="d80c3d9811506319a10d9740ec3273aa.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/lFTPbtU2eUeCq05rT_vlEQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Requisitions' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>

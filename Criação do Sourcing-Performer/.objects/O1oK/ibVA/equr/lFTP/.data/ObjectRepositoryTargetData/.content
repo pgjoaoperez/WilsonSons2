@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="FvqvZ5R7jkCneFzHYNfGcg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://wilsonsons-test.coupahost.com/requisition_headers" DesignTimeRectangle="822, 404, 29, 15" ElementType="Text" FriendlyName="'3582'" FullSelectorArgument="&lt;webctrl id='requisition_header_table_tag' tag='TABLE' /&gt;&lt;webctrl parentid='drag_req_3582' tableRow='2' aaname='3582' colName='*Req #*' /&gt;" FuzzySelectorArgument="&lt;webctrl id='requisition_header_table_tag' tag='TABLE' /&gt;&lt;webctrl parentid='drag_req_3582' tag='A' aaname='3582' colName='*Req #*' type='' class='' check:text='3582' /&gt;" Guid="4675907a-b653-474f-b31d-c53edfac29aa" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAATCAYAAAAeVmTJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAETSURBVEhL7ZLNDYMwDIWZkZm6Rc9ITMAIWYFrhYRAggsTuIl/iGMS6KniwCdFIjGxX/xcwQ14RAj3EzG5Aar3h9cIjs+RflSxsAZoFo55XKdi3cqngRVe+l47w8QRIYrAIrEwJlUXUGCSPIKx/V8qWrvNf2/QtPIdoL3NU7YjIyomS0HBKrHda1LBRFFEmohe8Op5a8h14rd/iaOI3XvtufHVr0NXsvcs2qrIhR2ccJmh9pf315l9Oj92DgSeB9OFQFlEMRkR7cq038zTmYDAiYhzb4MIEnglggUUBjUQRRj1OECyty/TVnlydkjRNJYn6QQV9pdwmQHDwhKzHeLCEt9ffRxoWtqqUzv+xyNCeEQQAF80/TSlScpuHAAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Requisitions' /&gt;" SearchSteps="Selector" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="d80c3d9811506319a10d9740ec3273aa.png" xmlns="">0GgZnWX_NlEeLn2TQnOklUA</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
