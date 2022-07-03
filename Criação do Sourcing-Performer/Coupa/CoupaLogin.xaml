@@ -1,14 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CoupaLogin" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CoupaLogin" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2096,1306</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1588,1537</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CoupaLogin_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="34">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -43,10 +43,10 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Reflection</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -80,39 +80,43 @@
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CoupaLogin" sap:VirtualizedContainerService.HintSize="476,1241" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CoupaLogin" sap:VirtualizedContainerService.HintSize="476,1472" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="login_user" />
+      <Variable x:TypeArguments="ss:SecureString" Name="Password_user" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="CoupaLogin" sap:VirtualizedContainerService.HintSize="434,1149" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="16e91e07-5486-4c71-b393-cdd112dddd85" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="CoupaLogin" sap:VirtualizedContainerService.HintSize="434,1380" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="16e91e07-5486-4c71-b393-cdd112dddd85" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="376,933" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="376,1163" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Realizando autenticação no Coupa.&quot;]" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CoupaUser'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[in_Config(&quot;userCoupa&quot;).ToString]" Version="V1">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,109" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Realizando autenticação no Coupa.&quot;]" />
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="LoginCoupa" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="334,183" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password_user]" Username="[login_user]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CoupaUser'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[login_user]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/sessions/support_login" ContentHash="19hpbVoFeEecgJ5u-CYVkQ" DesignTimeRectangle="1131, 629, 314, 36" ElementType="InputBox" FriendlyName="'INPUT user_login'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname=' Nome de usuário ou endereço de e-mail  ' id='user_login' name='user[login]' parentclass='login' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname=' Nome de usuário ou endereço de e-mail  ' id='user_login' name='user[login]' parentclass='login' class='' /&gt;" Guid="75b85302-1379-4534-bf9a-8b451979a13d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAT4AAAAoCAYAAABnwJYCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIcSURBVHhe7dmxahRRGIbhcytei3gxYm0RrVLYakovwGglKgGrrWzEcpcQCEiaIIFoSJDNzmRnZz7/7+yW3sCe/33gg2WY+uWc2aJxI61Xmu5vNN1earw+13h1qvHXIjZnjLE9XTTMLYumuW1unFvn5hUN/TZ6v39qWHxR9/G5ug/P1L1/qu6YMcb2dG6YWxZNc9vcuBq/aF7Rw7LWcP3trf4ePFJ/cqh+dsQYY20smua2uXFunZtXptVdPQouXz/WcDYTALTGbXPj6rU3mld89PM92EUEgFa5cW6dm1em5Z/6EZDwAWhZDV+0zs3bhW9O+AA0bRu+OeEDkAfhA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkM5/wrcgfACatg3fYhe++xuNV6eED0DTaviidW5emVZ3Gq/PCR+AptXwRevcvKKHpabbSy3fPNFwNtu9AgDtcNvcOLfOzSsa+nr0W/94V4vYnxyqnx0xxlgbi6a5bW6cW+fmFY0bab2qDzYX39V/faXu80t1n17EDhhjbE8XDYuWuWluW41etM7NK5qm+sMVrNfeuP/6Bf/zwRhjez23LJrmttXGuXXRvFIvwI7fNG4fbobYmjHGGlk0rQYvGufWSfoHaMv7dbU7LYkAAAAASUVORK5CYII=" InformativeScreenshot="40cbeab095313c16b6b976874f30f48d.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/RKHPyfVJw0mYPDFFpWCAyA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Coupa Home' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CoupaPassword'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,241" sap2010:WorkflowViewState.IdRef="NTypeInto_4" SecureText="[Ctype(in_Config(&quot;passwordCoupa&quot;), SecureString)]" Version="V1">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CoupaPassword'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,243" sap2010:WorkflowViewState.IdRef="NTypeInto_4" SecureText="[Password_user]" Version="V1">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/sessions/support_login" ContentHash="YNwgwDnO30St7DRtcXttVA" DesignTimeRectangle="1131, 698, 314, 36" ElementType="InputBoxPassword" FriendlyName="'INPUT user_password'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname=' Senha  ' name='user[password]' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname=' Senha  ' name='user[password]' class='' /&gt;" Guid="5e57d495-fa16-47a8-942e-bcf7a3c7e413" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAT4AAAAoCAYAAABnwJYCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAERSURBVHhe7dYxqsQgGIXRt/+1pXYBAcEypZ3DD29CAtnA5J4DtxCx/fBvAYS5hW/OucYYq/duZvaKVdOqbVdn+I7jWNu2rX3fHx+bmf3iqmnVtmrc1xm+1trtAuAtqm3VuK8zfFVEgLe6Nk74gAjCB8QRPiCO8AFxhA+II3xAHOED4ggfEEf4gDjCB8QRPiCO8AFxhA+II3xAHOED4ggfEEf4gDjCB8QRPiCO8AFxhA+II3xAHOED4ggfEEf4gDjCB8QRPiCO8AFxhA+II3xAnMfwtdbWcRz/J4D3qLZV477O8NVFFXHf99V7NzN7xapp1bbrx+4MX5lzrjHG42Mzs19cNa3adnULH0AC4QPCrPUB/upf051xgcEAAAAASUVORK5CYII=" InformativeScreenshot="67ad8173cbf967fa6a1b45a9ca518304.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/KX3Ij729mkWgpgEQ-0eoYA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Coupa Home' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
               </uix:NTypeInto.Target>
             </uix:NTypeInto>
-            <uix:NClick ClickType="Single" DisplayName="Click 'CoupaSignin'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V1">
+            <uix:NClick ClickType="Single" DisplayName="Click 'CoupaSignin'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V1">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/sessions/support_login" ContentHash="SKZbBXwl-U6glaCHX773aw" DesignTimeRectangle="1364, 767, 80, 15" ElementType="Text" FriendlyName="'Signin'" FullSelectorArgument="&lt;webctrl tag='SPAN' aaname='Signin' innertext='Signin' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' aaname='Signin' innertext='Signin' type='' class='' check:text='Signin' /&gt;" Guid="9ffe072a-a65e-4d91-9a48-4ef6092619fb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAATCAYAAAAONioVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH/SURBVFhH7ZRrcoIwEIB7IT2U0HuA9BqF0FO0FalHaEdRf/p+e4YtuxAJJFpbgaEOznwTl90s7GfkAcLPZDKB4/FYcwPoED+S0MPhkCqs4+tiSeh+v6ckrpw6vj5WCq35O5LQ3W5XEGNwtSY0G5xHcAOe64GF1zQXxtK+3zN+eaR7WL46XySlCe09iRJjgQ0LepS/Y6Hb7bYARsDodLbhQ5m/H0oWek7qB7TphDIYSfVNaFttWnV3RPUjV4+uuwz0uCbZK+S76d7MEnpSLn8koZvNphi8SMoJyxfyfiI0jE9CPMwlclEo1vM875Guz8Zx74YOrC/fK3mGfChPKNIXTlRqKHHI5PXg833xj5EVygVezmcFKvrniCR0tVrBer0udu2YNDBivuN1H0yMWw4Eq+7p+zBTr7MhxUMWCTM71+Sz/QJwWnhvE/xzz3fDqhRaBgHToqFDoeLQgTBwl9e/R8I0Fij2/pQXe2Os6J8jktDlcpk/XzZoNJQNg/iaZ+JQGthfGHvx0FF+4HAhmBuATQJCYc6A9qbzIVyoMp/unfQzwaM4X8oRinCpJ7hM5NzQcZ1zSVhIlYUuFovq8WaQIONNkasYlRTaoddBeOLsPsV9G0+cBs+f6voqIQmdz+cVoAMG/k0FjFdVXfWoqND/S0robDaD6XRarzesCADAN3eA6IMs10lCAAAAAElFTkSuQmCC" InformativeScreenshot="c896615382cabeb7f5dced927007bc44.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/VuWZx1TIh0Cl7abRsiTCVw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Coupa Home' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete">
                   <uix:TargetAnchorable.Anchors>

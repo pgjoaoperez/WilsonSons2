@@ -1,14 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CoupaRequisitions" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CoupaRequisitions" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:stj="clr-namespace:System.Text.Json;assembly=System.Text.Json" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_requisicao" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2096,879</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1588,1704</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CoupaRequisitions_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="44">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -43,10 +43,20 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
       <x:String>System.Reflection</x:String>
-    </sco:Collection>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Text.Json</x:String>
+      <x:String>TelemetryClient.Attributes</x:String>
+      <x:String>Newtonsoft.Json.Serialization</x:String>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -80,41 +90,91 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
-    </sco:Collection>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.Text.Json</AssemblyReference>
+      <AssemblyReference>TelemetryClient</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CoupaRequisitions" sap:VirtualizedContainerService.HintSize="476,814" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CoupaRequisitions" sap:VirtualizedContainerService.HintSize="831,1639" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="stj:JsonElement" Name="obj" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="CoupaRequisitions" sap:VirtualizedContainerService.HintSize="434,722" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="3181ae52-93db-48d1-95f2-680ba303ba60" Version="V2">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Chrome: Coupa Home" sap:VirtualizedContainerService.HintSize="789,1547" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="83724eb1-9eef-4a7b-86ef-19e0b3329748" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Search Requisitions" sap:VirtualizedContainerService.HintSize="376,506" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence sap:VirtualizedContainerService.HintSize="755,1330" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="commodity" />
+              <Variable x:TypeArguments="scg:List(x:String)" Name="listaCommodity" />
+              <Variable x:TypeArguments="x:String" Name="numCommodity" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DeselectAfter="False" DisplayName="Type Into 'CoupaSearch'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[in_requisicao + &quot;[k(enter)]&quot;]" Version="V1">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/requisition_headers" ContentHash="Yeaum_Dga0uimZ8vqd8qIw" DesignTimeRectangle="1603, 355, 155, 25" ElementType="InputBox" FriendlyName="'INPUT sf_requisition_he…'" FullSelectorArgument="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' class='search' id='sf_requisition_header' name='search' title='Requisitions' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='search' id='sf_requisition_header' name='search' title='Requisitions' aaname='' /&gt;" Guid="26b424f5-b085-4f9b-afbb-c470fa4a88e6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJ8AAAAdCAYAAAC0Y74zAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALYSURBVHhe7ZtPaxNBGMb7EfwofgOv3iL0rnfvexYPntbePQiyBC/mUPGQg8mlHuxFkDYH8VANVcomlFZpmxBKGfeZfWczs3/6Z5PMCnl+8NDMO9NQ6I/33V3YjVarpRimiVA+prE48nW7XTWZTBQhywZewS/bt0w+bBCyamwBM/nY8YgP4FlBPkJ8QfnIwrT3T9TT7m/18O0Pnec7sdqLp7JbDeUjtTmfXWXSbb4bqqB35Ej48eBMTpZD+UhtXu6OtWSvvhxLJeXgZJZJeF0HrCnfSPXDQAXBPNFAtnwx6qswCFV/JGvilfj8UsuFblcGBMQ+RnAVNeQT8dq2bQMV+RaQ8jUKRirk+vzrQipF0P02O0NZFakhX7loo16YE3LFUL5G2f7298axiq6IM1XUkK+s85Wg5TBjOSeJs2d/V/rdUTty6lpsczbsJ6dQFPl6ctb5HrJqIB3EgoRV4CYE3a+KGvIl5OQJe/n2k+uOAwgSJVUggmW+2R1MxDaCAed3k2VbJDN/gxFO1t6vPdeYx+8P9VjFXW8ePH6BnPhZRT35LOyu5MhmC5QXzkbL5cpny5zJlseRFjRw3bnGOI9ZEgF7yTXg/miqg5sM1LFfJqZhYfkMqYRph3LGpBUjlRbK1MOw0Pnm8hVlzKB8jXH552fW2TBaEXy2g+u968QDd5ev0NUEezxWnQF5aZw1O9//zvGHJ+pw656axV+1YHikAnDXCyERU7uJu8sn/2RXiFSaeS0nghZF1vbnhLQLVsvnSJ2guyrEpnxeuZqeqnHnkRq+2NCBgKgtQg35gMgGCSWF0SiSle3bYzca2NKUj1l3jIuIlM8bkOzo9f1MPGTcaTUlH1knTj89c8TD6F0GlI/cirj9QIt3tvdGKotD+citwIi9+L4tq+VA+UhjUD7SGAX5+A4H8UHpOxx8e434oPTtNSMgOyBZBfDKFg9x5GMYn6F8TENpqX8+j6a+k+BwVQAAAABJRU5ErkJggg==" InformativeScreenshot="7d71d4c6c4990a81278b20ddf6612134.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/JLsGqMeT5Uymi-3uq-MFcQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Requisitions' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete" />
-              </uix:NTypeInto.Target>
-            </uix:NTypeInto>
-            <uix:NClick ClickType="Single" DisplayName="Click 'CoupaSelectRequisitions'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V1">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/requisition_headers" ContentHash="FvqvZ5R7jkCneFzHYNfGcg" DesignTimeRectangle="822, 404, 29, 15" ElementType="Text" FriendlyName="'3582'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl id='requisition_header_table_tag' tag='TABLE' /&gt;&lt;webctrl tableRow='2' aaname='{0}' colName='*Req #*' /&gt;&quot;, in_requisicao)]" FuzzySelectorArgument="&lt;webctrl id='requisition_header_table_tag' tag='TABLE' /&gt;&lt;webctrl parentid='drag_req_3582' tag='A' aaname='3582' colName='*Req #*' type='' class='' check:text='3582' /&gt;" Guid="4675907a-b653-474f-b31d-c53edfac29aa" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAATCAYAAAAeVmTJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAETSURBVEhL7ZLNDYMwDIWZkZm6Rc9ITMAIWYFrhYRAggsTuIl/iGMS6KniwCdFIjGxX/xcwQ14RAj3EzG5Aar3h9cIjs+RflSxsAZoFo55XKdi3cqngRVe+l47w8QRIYrAIrEwJlUXUGCSPIKx/V8qWrvNf2/QtPIdoL3NU7YjIyomS0HBKrHda1LBRFFEmohe8Op5a8h14rd/iaOI3XvtufHVr0NXsvcs2qrIhR2ccJmh9pf315l9Oj92DgSeB9OFQFlEMRkR7cq038zTmYDAiYhzb4MIEnglggUUBjUQRRj1OECyty/TVnlydkjRNJYn6QQV9pdwmQHDwhKzHeLCEt9ffRxoWtqqUzv+xyNCeEQQAF80/TSlScpuHAAAAABJRU5ErkJggg==" InformativeScreenshot="d80c3d9811506319a10d9740ec3273aa.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/lFTPbtU2eUeCq05rT_vlEQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Requisitions' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete" />
-              </uix:NClick.Target>
-            </uix:NClick>
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="713,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[&quot;https://wilsonsons-test.coupahost.com/requisition_headers/&quot;+in_requisicao]" Version="V1" />
+            <uix:NInjectJsScript InputParameter="{x:Null}" DisplayName="Injetar script Js" sap:VirtualizedContainerService.HintSize="713,258" sap2010:WorkflowViewState.IdRef="NInjectJsScript_1" ScriptCode="Coupa\Javascript\getCommodity.js" Version="V1">
+              <uix:NInjectJsScript.ScriptOutput>
+                <OutArgument x:TypeArguments="x:String">[commodity]</OutArgument>
+              </uix:NInjectJsScript.ScriptOutput>
+            </uix:NInjectJsScript>
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="713,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="stj:JsonElement">[obj]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="stj:JsonElement">[System.Text.Json.JsonSerializer.Deserialize(Of JsonElement)(commodity)]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="scg:List(x:String)">[listaCommodity]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="scg:List(x:String)">[New List(of String)]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <ui:ForEach x:TypeArguments="stj:JsonElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="713,186" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[obj.EnumerateArray]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="stj:JsonElement">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="stj:JsonElement" Name="item" />
+                  </ActivityAction.Argument>
+                  <AddToCollection x:TypeArguments="x:String" Collection="[listaCommodity]" DisplayName="Add To Collection" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddToCollection`1_2" Item="[item.ToString]" />
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+            <If Condition="[listaCommodity.Distinct().ToList.Count = 1]" sap:VirtualizedContainerService.HintSize="713,270" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,109" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Commodity são iguais&quot;]" />
+              </If.Then>
+              <If.Else>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,109" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Commodity não são iguais&quot;]" />
+              </If.Else>
+            </If>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="713,109" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;&quot;]" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="kkB6rGHiBkqZSol3PxRpkw" IconBase64="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" InformativeScreenshot="7f2ad702e5f1c38803904daaafead862.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/equr5itN50-PUN7OTpCOZg" Selector="&lt;html app='chrome.exe' title='Requisitions' /&gt;" Url="https://wilsonsons-test.coupahost.com/requisition_headers" />
+        <uix:TargetApp Area="-8, -8, 2576, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIFSURBVDhPjVNPSxtBHJ2PkPoJ7K1HCQoeW4QePHnswYNQ8eyhH8BjL6XSsvVQiwnUIiKihypBilspVlJaRcRidM3EtGlWTXbX3awbs8n4e7OzIk0qffBgdub33u/P7LB/IlNZIu4wzZggTtK6mziuTu+AZnCi/mDD+vaCX2bZG8Mnuv1bzkHiU1WoqA6IMupsmmfJQAyslF1BGN2seE83qwHWfR9NE2eyojaQeHjXzRf8Zm4y54lHK2YIkX52JexGS+T9EEJB1Xhs2URLI0pJ0IwRNnX8vGu+dLJVvZKZ/waMwJwX8oVyfZ8MBLEH4iFV1g1fHnhK1o7lUhD2rprnLF18pdITFv48Ye9//Xy2bfvcb6rQdqC1x7N7t5PtoHf0Iw5rIVdxYttpUM+djUpBM+hdPT1nb/kUGTyEgQ0DXNHA2qkN5+4PRTlAwKIBAhN7rpjJ+3IdtoSrdGQQQzNSqiyR4lHg+lmdyq7JNfZwlnjH6z0bFgYI2rEYf5sMuJcuyAn6YSu4P1sMkou/pcORFzpxDF3lF5ld3kJkgAMLfQ1+vziCYCxrWbFg12mUscfmSj/iPaIS30amksIskl8dl6VP9Dg4+blae1241Okce7j2PLHDu0BA1BsC47YsGKv9O94CEAWCCRLGPxi+8RIxdbr3/4VmwGSdGPWKgWUqQ3J9A8auAaRsLO5FtRRgAAAAAElFTkSuQmCC" InformativeScreenshot="e9db94639ead52728974cea3b889d37e.png" Selector="&lt;html app='chrome.exe' title='Coupa Home' /&gt;" Url="https://wilsonsons-test.coupahost.com/user/home" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>

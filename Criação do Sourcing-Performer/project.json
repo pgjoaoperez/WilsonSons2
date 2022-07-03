@@ -83,6 +83,12 @@
         "testCaseId": "f088cda5-ca92-4178-8206-9b3acc816f8f",
         "testCaseType": "TestCase",
         "fileName": "Tests\\WorkflowTestCaseTemplate.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "b0a949f6-238f-40e2-970e-2b3daf7f76eb",
+        "testCaseType": "TestCase",
+        "fileName": "Coupa\\Teste\\CoupaRequisitions_Test.xaml"
       }
     ],
     "modernBehavior": true
