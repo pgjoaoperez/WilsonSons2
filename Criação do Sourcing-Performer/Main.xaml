@@ -674,7 +674,7 @@
                     </State>
                   </Transition.To>
                 </Transition>
-                <Transition sap2010:Annotation.AnnotationText="Business Rule Exception" DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="596,998" sap2010:WorkflowViewState.IdRef="Transition_1">
+                <Transition sap2010:Annotation.AnnotationText="Business Rule Exception" DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="596,1201" sap2010:WorkflowViewState.IdRef="Transition_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:PointCollection x:Key="ConnectorLocation">361.383333333333,627.666666666667 361.383333333333,675 532.5,675 532.5,245.933333333333 475.333333333333,245.933333333333</av:PointCollection>
@@ -688,13 +688,13 @@
                     <x:Reference>__ReferenceID0</x:Reference>
                   </Transition.To>
                   <Transition.Action>
-                    <Sequence DisplayName="BusinessRuleEx Tratativas" sap:VirtualizedContainerService.HintSize="493,572" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                    <Sequence DisplayName="BusinessRuleEx Tratativas" sap:VirtualizedContainerService.HintSize="493,775" sap2010:WorkflowViewState.IdRef="Sequence_31">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="451,480" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                      <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="451,683" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
                         <ui:IfElseIf.ConditionBlocks>
                           <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                             <ui:IfElseIfBlock BlockType="If" Condition="[SystemException.Message.Contains(&quot;Status Code API&quot;)]">
@@ -708,9 +708,20 @@
                                 </Sequence>
                               </ui:IfElseIfBlock.Then>
                             </ui:IfElseIfBlock>
-                            <ui:IfElseIfBlock BlockType="ElseIf" Condition="[SystemException.Message.Contains(&quot;Tag Retirado&quot;)]">
+                            <ui:IfElseIfBlock BlockType="ElseIf" Condition="[SystemException.Message.Contains(&quot;Tag de Retirado&quot;)]">
                               <ui:IfElseIfBlock.Then>
                                 <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </ui:IfElseIfBlock.Then>
+                            </ui:IfElseIfBlock>
+                            <ui:IfElseIfBlock BlockType="ElseIf" Condition="[SystemException.Message.Contains(&quot;Commodities distintas&quot;)]">
+                              <ui:IfElseIfBlock.Then>
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_34">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
