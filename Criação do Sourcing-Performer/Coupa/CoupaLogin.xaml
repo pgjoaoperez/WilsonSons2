@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1588,1537</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1586,1742</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CoupaLogin_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="34">
@@ -46,7 +46,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="66">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -80,65 +80,77 @@
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CoupaLogin" sap:VirtualizedContainerService.HintSize="476,1472" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CoupaLogin" sap:VirtualizedContainerService.HintSize="840,1677" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="login_user" />
-      <Variable x:TypeArguments="ss:SecureString" Name="Password_user" />
+      <Variable x:TypeArguments="ss:SecureString" Name="password_user" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="CoupaLogin" sap:VirtualizedContainerService.HintSize="434,1380" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="16e91e07-5486-4c71-b393-cdd112dddd85" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="CoupaLogin" sap:VirtualizedContainerService.HintSize="798,1585" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Always" ScopeGuid="be186d1a-8e65-44ff-8892-b463409c1819" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="376,1163" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'CoupaOnline'" sap:VirtualizedContainerService.HintSize="764,1369" sap2010:WorkflowViewState.IdRef="NCheckState_1" Version="V1">
+            <uix:NCheckState.IfExists>
+              <ui:LogMessage sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Coupa já está logado, prosseguindo com o processo.&quot;]" />
+            </uix:NCheckState.IfExists>
+            <uix:NCheckState.IfNotExists>
+              <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="376,1153" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Realizando autenticação no Coupa.&quot;]" />
+                <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="LoginCoupa" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="334,180" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password_user]" Username="[login_user]" />
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CoupaUser'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[login_user]" Version="V1">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/sessions/support_login" ContentHash="19hpbVoFeEecgJ5u-CYVkQ" DesignTimeRectangle="1131, 629, 314, 36" ElementType="InputBox" FriendlyName="'INPUT user_login'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname=' Nome de usuário ou endereço de e-mail  ' id='user_login' name='user[login]' parentclass='login' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname=' Nome de usuário ou endereço de e-mail  ' id='user_login' name='user[login]' parentclass='login' class='' /&gt;" Guid="75b85302-1379-4534-bf9a-8b451979a13d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAT4AAAAoCAYAAABnwJYCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIcSURBVHhe7dmxahRRGIbhcytei3gxYm0RrVLYakovwGglKgGrrWzEcpcQCEiaIIFoSJDNzmRnZz7/7+yW3sCe/33gg2WY+uWc2aJxI61Xmu5vNN1earw+13h1qvHXIjZnjLE9XTTMLYumuW1unFvn5hUN/TZ6v39qWHxR9/G5ug/P1L1/qu6YMcb2dG6YWxZNc9vcuBq/aF7Rw7LWcP3trf4ePFJ/cqh+dsQYY20smua2uXFunZtXptVdPQouXz/WcDYTALTGbXPj6rU3mld89PM92EUEgFa5cW6dm1em5Z/6EZDwAWhZDV+0zs3bhW9O+AA0bRu+OeEDkAfhA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkM5/wrcgfACatg3fYhe++xuNV6eED0DTaviidW5emVZ3Gq/PCR+AptXwRevcvKKHpabbSy3fPNFwNtu9AgDtcNvcOLfOzSsa+nr0W/94V4vYnxyqnx0xxlgbi6a5bW6cW+fmFY0bab2qDzYX39V/faXu80t1n17EDhhjbE8XDYuWuWluW41etM7NK5qm+sMVrNfeuP/6Bf/zwRhjez23LJrmttXGuXXRvFIvwI7fNG4fbobYmjHGGlk0rQYvGufWSfoHaMv7dbU7LYkAAAAASUVORK5CYII=" InformativeScreenshot="40cbeab095313c16b6b976874f30f48d.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/RKHPyfVJw0mYPDFFpWCAyA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Coupa Home' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CoupaPassword'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,241" sap2010:WorkflowViewState.IdRef="NTypeInto_4" SecureText="[Password_user]" Version="V1">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/sessions/support_login" ContentHash="YNwgwDnO30St7DRtcXttVA" DesignTimeRectangle="1131, 698, 314, 36" ElementType="InputBoxPassword" FriendlyName="'INPUT user_password'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname=' Senha  ' name='user[password]' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname=' Senha  ' name='user[password]' class='' /&gt;" Guid="5e57d495-fa16-47a8-942e-bcf7a3c7e413" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAT4AAAAoCAYAAABnwJYCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAERSURBVHhe7dYxqsQgGIXRt/+1pXYBAcEypZ3DD29CAtnA5J4DtxCx/fBvAYS5hW/OucYYq/duZvaKVdOqbVdn+I7jWNu2rX3fHx+bmf3iqmnVtmrc1xm+1trtAuAtqm3VuK8zfFVEgLe6Nk74gAjCB8QRPiCO8AFxhA+II3xAHOED4ggfEEf4gDjCB8QRPiCO8AFxhA+II3xAHOED4ggfEEf4gDjCB8QRPiCO8AFxhA+II3xAHOED4ggfEEf4gDjCB8QRPiCO8AFxhA+II3xAnMfwtdbWcRz/J4D3qLZV477O8NVFFXHf99V7NzN7xapp1bbrx+4MX5lzrjHG42Mzs19cNa3adnULH0AC4QPCrPUB/upf051xgcEAAAAASUVORK5CYII=" InformativeScreenshot="67ad8173cbf967fa6a1b45a9ca518304.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/KX3Ij729mkWgpgEQ-0eoYA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Coupa Home' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NClick ClickType="Single" DisplayName="Click 'CoupaSignin'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V1">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/sessions/support_login" ContentHash="SKZbBXwl-U6glaCHX773aw" DesignTimeRectangle="1364, 767, 80, 15" ElementType="Text" FriendlyName="'Signin'" FullSelectorArgument="&lt;webctrl tag='SPAN' aaname='Signin' innertext='Signin' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' aaname='Signin' innertext='Signin' type='' class='' check:text='Signin' /&gt;" Guid="9ffe072a-a65e-4d91-9a48-4ef6092619fb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAATCAYAAAAONioVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH/SURBVFhH7ZRrcoIwEIB7IT2U0HuA9BqF0FO0FalHaEdRf/p+e4YtuxAJJFpbgaEOznwTl90s7GfkAcLPZDKB4/FYcwPoED+S0MPhkCqs4+tiSeh+v6ckrpw6vj5WCq35O5LQ3W5XEGNwtSY0G5xHcAOe64GF1zQXxtK+3zN+eaR7WL46XySlCe09iRJjgQ0LepS/Y6Hb7bYARsDodLbhQ5m/H0oWek7qB7TphDIYSfVNaFttWnV3RPUjV4+uuwz0uCbZK+S76d7MEnpSLn8koZvNphi8SMoJyxfyfiI0jE9CPMwlclEo1vM875Guz8Zx74YOrC/fK3mGfChPKNIXTlRqKHHI5PXg833xj5EVygVezmcFKvrniCR0tVrBer0udu2YNDBivuN1H0yMWw4Eq+7p+zBTr7MhxUMWCTM71+Sz/QJwWnhvE/xzz3fDqhRaBgHToqFDoeLQgTBwl9e/R8I0Fij2/pQXe2Os6J8jktDlcpk/XzZoNJQNg/iaZ+JQGthfGHvx0FF+4HAhmBuATQJCYc6A9qbzIVyoMp/unfQzwaM4X8oRinCpJ7hM5NzQcZ1zSVhIlYUuFovq8WaQIONNkasYlRTaoddBeOLsPsV9G0+cBs+f6voqIQmdz+cVoAMG/k0FjFdVXfWoqND/S0robDaD6XRarzesCADAN3eA6IMs10lCAAAAAElFTkSuQmCC" InformativeScreenshot="c896615382cabeb7f5dced927007bc44.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/VuWZx1TIh0Cl7abRsiTCVw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Coupa Home' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="1363, 760, 82, 28" ElementType="Button" FriendlyName="'Signin'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='button ' aaname='Signin' check:innerText='Signin' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAAgCAYAAACILY8rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKySURBVGhD7ZpbbtpAFIa7IVhUTPaBcbdRY3cVTQCHJTQCA4/c77cnJCSkU/7BY8ZmDG6widPOkT5Njs+ZgfkyQYrxN1KRSkjF7nY72m63tNlsFFeAI7iSRUDsfr+n0WhEg8GAxuOxIgZwBWdwJ4Yv9nA4UL/fp9lsJv3tKKKBM7iDQx6+2OVySZPJRDpRcRu4g0MevlgYR2G9Xis+ANzBIQ9fbLfblU5QxAcOeQTErlYrxR3cFItjLU5Qebw8UuxisWBNGDkqj59fFav4OJFi5/N5SnTI1vKUz3GeyXZ5rU4Grmk2dS7m/T2dn8/sNQxHXk+Th4utfxdleiJzBtVZ/T8Qi/8gkqdNFjutJXqT1v8dPklslNw3KrETa1H7oj9PJaPExoLdZv1tu3C6bltU8HrOc4V6Lbi2ZQhrslryRIqdTqfpUD3J8TEcoe6cxR5zX0wVtbNkiEU/r/M1gv3h3Fs7VyCrcfla5/eQDI8XCxrCCQtsTtzs+WPD4fO8X0pYLBd5vR4WKVk/QSLF4jYYbiakOlZ0tnGgv+K6QzrypzK545r/cyvUX7BaLG9ZJ3F6JU49vJ5L5Se8tk5O1Pu7Y7wq9hG4lnba/FGsuHlX2HiN97+exGmWK5l7qy6ujVyyfoJEisUN28R5N0ljmzOp6V2r6ticRuY78qq3+VO9WeZiUGuSyUQcxZWbbG6wfoSLldaDa5/X06nK8mR5rFjA5fpwqSBq815f+Zq4I19B7HA4zB4vRSaq+CKpZYxMi62wj4njCTQbLG+YOIEa/fgt788SkWLxxdjnU6Ei/nwFir9kfdkj42K/LlKx+L6m1+up8Y4R8PDF4oat2MhRefwcDnn4YvlzBWjAkQ6PHFWX1+FO+lwBgj8JgyZFfOAs8kkYMdSzW/GI/eyWiuRCiU0liP4A5eIgKztnoOwAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                </uix:NClick>
+              </Sequence>
+            </uix:NCheckState.IfNotExists>
+            <uix:NCheckState.Target>
+              <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/user/home" ContentHash="InKCRsL13kW1rH6soUt-qA" DesignTimeRectangle="1181, 95, 52, 26" ElementType="Text" FriendlyName="'João'" FullSelectorArgument="&lt;webctrl aria-role='application' tag='A' href='/user/account' id='my_account' title='Coupa Home' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='application' tag='A' href='/user/account' id='my_account' title='Coupa Home' type='' class='s-menu-topLink uppercase' aaname='João' check:text='João' /&gt;" Guid="fc517cc9-1640-47b7-8b8a-712e7778d933" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAeCAYAAAB5c901AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGASURBVFhH7ZTdjYMwDIBvJ+YK70yB2IBnnugkFWNUYgdf7TjgGJMr5aiUKl+FWpKG8PknP/DlFMHcKYK5UwRz51LBqaugqipo7wDzrYb6NvPM57hO8DFC7UaYn5/RoWgN44PnPkgpUbi3z+i3MPGtJ2QlXPvZwdJMZ2+CdnkOXnqvc7wh6F8o6icsRz1GYCBqaLud/uN12KMLtJ8aO8FhQTo4OiPGVqZxDPvQmuMqsMQp69S/afq+h2EY+C4Gx3H+oKDPnh3d7RwGwwsY6yh7O6WbmmPw5UNZa0m8D3PHBJMb64yg1PpfyorMvJnVQCqQK5aklDuewSOCuE4K0Voh9A+CiJRsmmb5jePIRSWqT9n1WgJwskQlUhKvIIcYgkZpiYZ/6ZDR2WLiZ50/ZCTOOZLDb4khGG+8FfKZil6MhNaxTb8FdGZ4XVQRFKjXylOj5RC7RHljn3KrT3QJynJKlTGvMwK2PmuvL9/j7x7MnCKYO0Uwd4pg7hTB3PlyQYBfeMD8YltfxigAAAAASUVORK5CYII=" InformativeScreenshot="c13e6eecb21675a6ac3fc155cbd5424f.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/7_4SdCipIkGmzxDwtpz5dQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Coupa Home' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+            </uix:NCheckState.Target>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,109" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Realizando autenticação no Coupa.&quot;]" />
-            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="LoginCoupa" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="334,183" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password_user]" Username="[login_user]" />
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CoupaUser'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[login_user]" Version="V1">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/sessions/support_login" ContentHash="19hpbVoFeEecgJ5u-CYVkQ" DesignTimeRectangle="1131, 629, 314, 36" ElementType="InputBox" FriendlyName="'INPUT user_login'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname=' Nome de usuário ou endereço de e-mail  ' id='user_login' name='user[login]' parentclass='login' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname=' Nome de usuário ou endereço de e-mail  ' id='user_login' name='user[login]' parentclass='login' class='' /&gt;" Guid="75b85302-1379-4534-bf9a-8b451979a13d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAT4AAAAoCAYAAABnwJYCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIcSURBVHhe7dmxahRRGIbhcytei3gxYm0RrVLYakovwGglKgGrrWzEcpcQCEiaIIFoSJDNzmRnZz7/7+yW3sCe/33gg2WY+uWc2aJxI61Xmu5vNN1earw+13h1qvHXIjZnjLE9XTTMLYumuW1unFvn5hUN/TZ6v39qWHxR9/G5ug/P1L1/qu6YMcb2dG6YWxZNc9vcuBq/aF7Rw7LWcP3trf4ePFJ/cqh+dsQYY20smua2uXFunZtXptVdPQouXz/WcDYTALTGbXPj6rU3mld89PM92EUEgFa5cW6dm1em5Z/6EZDwAWhZDV+0zs3bhW9O+AA0bRu+OeEDkAfhA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkA7hA5AO4QOQDuEDkM5/wrcgfACatg3fYhe++xuNV6eED0DTaviidW5emVZ3Gq/PCR+AptXwRevcvKKHpabbSy3fPNFwNtu9AgDtcNvcOLfOzSsa+nr0W/94V4vYnxyqnx0xxlgbi6a5bW6cW+fmFY0bab2qDzYX39V/faXu80t1n17EDhhjbE8XDYuWuWluW41etM7NK5qm+sMVrNfeuP/6Bf/zwRhjez23LJrmttXGuXXRvFIvwI7fNG4fbobYmjHGGlk0rQYvGufWSfoHaMv7dbU7LYkAAAAASUVORK5CYII=" InformativeScreenshot="40cbeab095313c16b6b976874f30f48d.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/RKHPyfVJw0mYPDFFpWCAyA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Coupa Home' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
-              </uix:NTypeInto.Target>
-            </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'CoupaPassword'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,243" sap2010:WorkflowViewState.IdRef="NTypeInto_4" SecureText="[Password_user]" Version="V1">
-              <uix:NTypeInto.Target>
-                <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/sessions/support_login" ContentHash="YNwgwDnO30St7DRtcXttVA" DesignTimeRectangle="1131, 698, 314, 36" ElementType="InputBoxPassword" FriendlyName="'INPUT user_password'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname=' Senha  ' name='user[password]' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname=' Senha  ' name='user[password]' class='' /&gt;" Guid="5e57d495-fa16-47a8-942e-bcf7a3c7e413" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAT4AAAAoCAYAAABnwJYCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAERSURBVHhe7dYxqsQgGIXRt/+1pXYBAcEypZ3DD29CAtnA5J4DtxCx/fBvAYS5hW/OucYYq/duZvaKVdOqbVdn+I7jWNu2rX3fHx+bmf3iqmnVtmrc1xm+1trtAuAtqm3VuK8zfFVEgLe6Nk74gAjCB8QRPiCO8AFxhA+II3xAHOED4ggfEEf4gDjCB8QRPiCO8AFxhA+II3xAHOED4ggfEEf4gDjCB8QRPiCO8AFxhA+II3xAHOED4ggfEEf4gDjCB8QRPiCO8AFxhA+II3xAnMfwtdbWcRz/J4D3qLZV477O8NVFFXHf99V7NzN7xapp1bbrx+4MX5lzrjHG42Mzs19cNa3adnULH0AC4QPCrPUB/upf051xgcEAAAAASUVORK5CYII=" InformativeScreenshot="67ad8173cbf967fa6a1b45a9ca518304.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/KX3Ij729mkWgpgEQ-0eoYA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Coupa Home' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
-              </uix:NTypeInto.Target>
-            </uix:NTypeInto>
-            <uix:NClick ClickType="Single" DisplayName="Click 'CoupaSignin'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V1">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/sessions/support_login" ContentHash="SKZbBXwl-U6glaCHX773aw" DesignTimeRectangle="1364, 767, 80, 15" ElementType="Text" FriendlyName="'Signin'" FullSelectorArgument="&lt;webctrl tag='SPAN' aaname='Signin' innertext='Signin' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' aaname='Signin' innertext='Signin' type='' class='' check:text='Signin' /&gt;" Guid="9ffe072a-a65e-4d91-9a48-4ef6092619fb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAATCAYAAAAONioVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH/SURBVFhH7ZRrcoIwEIB7IT2U0HuA9BqF0FO0FalHaEdRf/p+e4YtuxAJJFpbgaEOznwTl90s7GfkAcLPZDKB4/FYcwPoED+S0MPhkCqs4+tiSeh+v6ckrpw6vj5WCq35O5LQ3W5XEGNwtSY0G5xHcAOe64GF1zQXxtK+3zN+eaR7WL46XySlCe09iRJjgQ0LepS/Y6Hb7bYARsDodLbhQ5m/H0oWek7qB7TphDIYSfVNaFttWnV3RPUjV4+uuwz0uCbZK+S76d7MEnpSLn8koZvNphi8SMoJyxfyfiI0jE9CPMwlclEo1vM875Guz8Zx74YOrC/fK3mGfChPKNIXTlRqKHHI5PXg833xj5EVygVezmcFKvrniCR0tVrBer0udu2YNDBivuN1H0yMWw4Eq+7p+zBTr7MhxUMWCTM71+Sz/QJwWnhvE/xzz3fDqhRaBgHToqFDoeLQgTBwl9e/R8I0Fij2/pQXe2Os6J8jktDlcpk/XzZoNJQNg/iaZ+JQGthfGHvx0FF+4HAhmBuATQJCYc6A9qbzIVyoMp/unfQzwaM4X8oRinCpJ7hM5NzQcZ1zSVhIlYUuFovq8WaQIONNkasYlRTaoddBeOLsPsV9G0+cBs+f6voqIQmdz+cVoAMG/k0FjFdVXfWoqND/S0robDaD6XRarzesCADAN3eA6IMs10lCAAAAAElFTkSuQmCC" InformativeScreenshot="c896615382cabeb7f5dced927007bc44.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/VuWZx1TIh0Cl7abRsiTCVw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Coupa Home' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target DesignTimeRectangle="1363, 760, 82, 28" ElementType="Button" FriendlyName="'Signin'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='button ' aaname='Signin' check:innerText='Signin' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAAgCAYAAACILY8rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKySURBVGhD7ZpbbtpAFIa7IVhUTPaBcbdRY3cVTQCHJTQCA4/c77cnJCSkU/7BY8ZmDG6widPOkT5Njs+ZgfkyQYrxN1KRSkjF7nY72m63tNlsFFeAI7iSRUDsfr+n0WhEg8GAxuOxIgZwBWdwJ4Yv9nA4UL/fp9lsJv3tKKKBM7iDQx6+2OVySZPJRDpRcRu4g0MevlgYR2G9Xis+ANzBIQ9fbLfblU5QxAcOeQTErlYrxR3cFItjLU5Qebw8UuxisWBNGDkqj59fFav4OJFi5/N5SnTI1vKUz3GeyXZ5rU4Grmk2dS7m/T2dn8/sNQxHXk+Th4utfxdleiJzBtVZ/T8Qi/8gkqdNFjutJXqT1v8dPklslNw3KrETa1H7oj9PJaPExoLdZv1tu3C6bltU8HrOc4V6Lbi2ZQhrslryRIqdTqfpUD3J8TEcoe6cxR5zX0wVtbNkiEU/r/M1gv3h3Fs7VyCrcfla5/eQDI8XCxrCCQtsTtzs+WPD4fO8X0pYLBd5vR4WKVk/QSLF4jYYbiakOlZ0tnGgv+K6QzrypzK545r/cyvUX7BaLG9ZJ3F6JU49vJ5L5Se8tk5O1Pu7Y7wq9hG4lnba/FGsuHlX2HiN97+exGmWK5l7qy6ujVyyfoJEisUN28R5N0ljmzOp6V2r6ticRuY78qq3+VO9WeZiUGuSyUQcxZWbbG6wfoSLldaDa5/X06nK8mR5rFjA5fpwqSBq815f+Zq4I19B7HA4zB4vRSaq+CKpZYxMi62wj4njCTQbLG+YOIEa/fgt788SkWLxxdjnU6Ei/nwFir9kfdkj42K/LlKx+L6m1+up8Y4R8PDF4oat2MhRefwcDnn4YvlzBWjAkQ6PHFWX1+FO+lwBgj8JgyZFfOAs8kkYMdSzW/GI/eyWiuRCiU0liP4A5eIgKztnoOwAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NClick.Target>
-            </uix:NClick>
-          </Sequence>
+          </uix:NCheckState>
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
         <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="VODVngs7l0uWrDBhNJZX8A" IconBase64="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" InformativeScreenshot="d4337c2631a9fd495173dddd88373b32.png" Reference="FB9c7qXAV0OOXtfk_NLfvg/1cPS0Ov55kWlDuA9UeCW4g" Selector="&lt;html app='chrome.exe' title='Coupa Home' /&gt;" Url="https://wilsonsons-test.coupahost.com/sessions/support_login" />
       </uix:NApplicationCard.TargetApp>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
   </Sequence>
 </Activity>

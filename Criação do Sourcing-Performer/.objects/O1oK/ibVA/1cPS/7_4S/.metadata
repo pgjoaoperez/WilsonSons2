@@ -1,0 +1,16 @@
+﻿{
+  "Id": "7_4SdCipIkGmzxDwtpz5dQ",
+  "Reference": "FB9c7qXAV0OOXtfk_NLfvg/7_4SdCipIkGmzxDwtpz5dQ",
+  "ParentRef": "FB9c7qXAV0OOXtfk_NLfvg/1cPS0Ov55kWlDuA9UeCW4g",
+  "Name": "CoupaOnline",
+  "Type": "Element",
+  "TaxonomyType": "Elemento",
+  "Created": "2022-07-13T23:23:51.9511578Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.4.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-13T23:24:32.3303669Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.4.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
