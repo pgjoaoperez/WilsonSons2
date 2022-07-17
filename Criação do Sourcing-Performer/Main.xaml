@@ -804,7 +804,7 @@
                                 </Assign>
                               </ui:IfElseIfBlock.Then>
                             </ui:IfElseIfBlock>
-                            <ui:IfElseIfBlock BlockType="ElseIf" Condition="[BusinessException.Message.Contains(&quot;Valor acima do limite&quot;)]">
+                            <ui:IfElseIfBlock BlockType="ElseIf" Condition="[BusinessException.Message.Contains(&quot;Valor da requisição maior do que o permitido&quot;)]">
                               <ui:IfElseIfBlock.Then>
                                 <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_31">
                                   <Assign.To>
