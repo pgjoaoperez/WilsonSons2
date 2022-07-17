@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1586,3075</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1586,876</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CoupaRequisitions_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
@@ -114,7 +114,6 @@
       <AssemblyReference>UiPath.Web</AssemblyReference>
       <AssemblyReference>UiPath.GSuite</AssemblyReference>
       <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -122,7 +121,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="CoupaRequisitions" sap:VirtualizedContainerService.HintSize="764,3010" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CoupaRequisitions" sap:VirtualizedContainerService.HintSize="242,811" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="stj:JsonElement" Name="obj" />
       <Variable x:TypeArguments="x:Int32" Name="status_get" />
@@ -141,19 +140,11 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="722,60" sap2010:WorkflowViewState.IdRef="Assign_1">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[in_requisicao]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">3607</InArgument>
-      </Assign.Value>
-    </Assign>
-    <Sequence sap2010:Annotation.AnnotationText="Traz os itens da requisição." DisplayName="Get Http" sap:VirtualizedContainerService.HintSize="722,815" sap2010:WorkflowViewState.IdRef="Sequence_11">
+    <Sequence sap2010:Annotation.AnnotationText="Traz os itens da requisição." DisplayName="Get Http" sap:VirtualizedContainerService.HintSize="200,97" sap2010:WorkflowViewState.IdRef="Sequence_11">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -225,11 +216,11 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:MultipleAssign>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Verifica se a requisição possui Tag XXX." DisplayName="Tag Retirado?" sap:VirtualizedContainerService.HintSize="722,1489" sap2010:WorkflowViewState.IdRef="Sequence_13">
+    <Sequence sap2010:Annotation.AnnotationText="Verifica se a requisição possui Tag XXX." DisplayName="Tag Retirado?" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="Sequence_13">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -367,7 +358,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:IfElseIf>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Verifica se a requisição possui todas as commodities iguais." DisplayName="Commodities Iguais?" sap:VirtualizedContainerService.HintSize="722,108" sap2010:WorkflowViewState.IdRef="Sequence_19">
+    <Sequence sap2010:Annotation.AnnotationText="Verifica se a requisição possui todas as commodities iguais." DisplayName="Commodities Iguais?" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="Sequence_19">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_commodities" />
       </Sequence.Variables>
@@ -460,7 +451,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Verifica se o valor da requisição está dentro do limite aceito pelo robô." DisplayName="Valor Requisição" sap:VirtualizedContainerService.HintSize="722,123" sap2010:WorkflowViewState.IdRef="Sequence_23">
+    <Sequence sap2010:Annotation.AnnotationText="Verifica se o valor da requisição está dentro do limite aceito pelo robô." DisplayName="Valor Requisição" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_23">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="valor_maximo_robo" />
         <Variable x:TypeArguments="x:String" Name="total" />
@@ -518,7 +509,7 @@
         </If.Then>
       </If>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Consulta a base e verifica se existe pelo menos um fornecedor." DisplayName="Consultar vendor_list" sap:VirtualizedContainerService.HintSize="722,123" sap2010:WorkflowViewState.IdRef="Sequence_22">
+    <Sequence sap2010:Annotation.AnnotationText="Consulta a base e verifica se existe pelo menos um fornecedor." DisplayName="Consultar vendor_list" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_22">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_vendor_list" />
       </Sequence.Variables>
@@ -529,7 +520,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Ler Vendor List" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_27">
+      <Sequence DisplayName="Ler Vendor List" sap:VirtualizedContainerService.HintSize="476,66" sap2010:WorkflowViewState.IdRef="Sequence_27">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -554,7 +545,7 @@
         </uga:GSuiteApplicationScope>
         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[dt_vendor_list.Rows.Count]" />
       </Sequence>
-      <Sequence DisplayName="Procurar Fornecedores" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_28">
+      <Sequence DisplayName="Procurar Fornecedores" sap:VirtualizedContainerService.HintSize="476,660" sap2010:WorkflowViewState.IdRef="Sequence_28">
         <Sequence.Variables>
           <Variable x:TypeArguments="sd:DataTable" Name="dt_fornecedores" />
           <Variable x:TypeArguments="x:String" Name="commodities_filtro" />
@@ -562,8 +553,8 @@
         </Sequence.Variables>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="434,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_10">
