@@ -15,7 +15,7 @@
         "C:\\Users\\peere\\.nuget\\packages\\npoi\\2.5.5\\lib/net45/NPOI.OpenXml4Net.dll",
         "C:\\Users\\peere\\.nuget\\packages\\npoi\\2.5.5\\lib/net45/NPOI.OpenXmlFormats.dll",
         "C:\\Users\\peere\\.nuget\\packages\\npoi\\2.5.5\\lib/net45/NPOI.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\lib/net40/BouncyCastle.Crypto.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\lib/net40/BouncyCastle.Crypto.dll",
         "C:\\Users\\peere\\.nuget\\packages\\sharpziplib\\1.3.3\\lib/net45/ICSharpCode.SharpZipLib.dll",
         "C:\\Users\\peere\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/net40/System.IO.Abstractions.dll",
         "C:\\Users\\peere\\.nuget\\packages\\system.threading.tasks.dataflow\\5.0.0\\lib/net461/System.Threading.Tasks.Dataflow.dll",
@@ -31,6 +31,58 @@
         "C:\\Users\\peere\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib/net461/TelemetryClient.dll"
       ],
       "Path": "C:\\Users\\peere\\.nuget\\packages\\uipath.excel.activities\\2.12.3"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.GSuite.Activities",
+        "Version": "1.17.0-preview"
+      },
+      "Assemblies": [
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis\\1.55.0\\lib/net45/Google.Apis.PlatformServices.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis\\1.55.0\\lib/net45/Google.Apis.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/net461/Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/net461/Google.Apis.Auth.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis.calendar.v3\\1.55.0.2554\\lib/net45/Google.Apis.Calendar.v3.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis.core\\1.55.0\\lib/net45/Google.Apis.Core.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis.docs.v1\\1.55.0.2379\\lib/net45/Google.Apis.Docs.v1.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis.drive.v3\\1.55.0.2566\\lib/net45/Google.Apis.Drive.v3.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis.gmail.v1\\1.55.0.2510\\lib/net45/Google.Apis.Gmail.v1.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis.script.v1\\1.55.0.2555\\lib/net45/Google.Apis.Script.v1.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis.sheets.v4\\1.55.0.2371\\lib/net45/Google.Apis.Sheets.v4.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\mimekit\\3.1.1\\lib/net46/MimeKit.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\newtonsoft.json\\13.0.1\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\nito.asyncex.context\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Context.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\nito.asyncex.coordination\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Coordination.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\nito.asyncex.interop.waithandles\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Interop.WaitHandles.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\nito.asyncex.oop\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Oop.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\nito.asyncex.tasks\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Tasks.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\nito.cancellation\\1.1.0\\lib/netstandard2.0/Nito.Cancellation.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\nito.collections.deque\\1.1.0\\lib/netstandard2.0/Nito.Collections.Deque.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\nito.disposables\\2.2.0\\lib/net461/Nito.Disposables.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\nodatime\\2.4.7\\lib/net45/NodaTime.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\lib/net40/BouncyCastle.Crypto.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\system.buffers\\4.5.1\\lib/net461/System.Buffers.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\system.collections.immutable\\5.0.0\\lib/net461/System.Collections.Immutable.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/net40/System.IO.Abstractions.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\system.linq.async\\5.0.0\\lib/net461/System.Linq.Async.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\system.linq.async.queryable\\5.0.0\\lib/net461/System.Linq.Async.Queryable.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\system.memory\\4.5.4\\lib/net461/System.Memory.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\lib/net46/System.Numerics.Vectors.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\system.threading.tasks.dataflow\\5.0.0\\lib/net461/System.Threading.Tasks.Dataflow.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\lib/net461/System.Threading.Tasks.Extensions.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\system.valuetuple\\4.5.0\\lib/net461/System.ValueTuple.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net461/UiPath.Activities.RuntimeGovernance.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.connectionclient\\1.3.0\\lib/net461/ConnectionClient.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.gsuite.activities\\1.17.0-preview\\lib/net461/UiPath.GSuite.Activities.Design.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.gsuite.activities\\1.17.0-preview\\lib/net461/UiPath.GSuite.Activities.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.gsuite.activities\\1.17.0-preview\\lib/net461/UiPath.GSuite.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.gsuite.activities\\1.17.0-preview\\lib/net461/UiPath.Orchestrator.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.platform\\22.4.2-alpha.2662491\\lib/net461/UiPath.Platform.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib/net461/TelemetryClient.dll"
+      ],
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\uipath.gsuite.activities\\1.17.0-preview"
     },
     {
       "Package": {
@@ -180,23 +232,32 @@
     },
     {
       "Package": {
-        "Id": "UiPath.GSuite.Activities",
-        "Version": "1.17.0-preview"
+        "Id": "UiPath.Mail.Activities",
+        "Version": "1.16.0-preview"
       },
       "Assemblies": [
-        "C:\\Users\\peere\\.nuget\\packages\\google.apis\\1.55.0\\lib/net45/Google.Apis.dll",
         "C:\\Users\\peere\\.nuget\\packages\\google.apis\\1.55.0\\lib/net45/Google.Apis.PlatformServices.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/net461/Google.Apis.Auth.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis\\1.55.0\\lib/net45/Google.Apis.dll",
         "C:\\Users\\peere\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/net461/Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib/net461/Google.Apis.Auth.dll",
         "C:\\Users\\peere\\.nuget\\packages\\google.apis.calendar.v3\\1.55.0.2554\\lib/net45/Google.Apis.Calendar.v3.dll",
         "C:\\Users\\peere\\.nuget\\packages\\google.apis.core\\1.55.0\\lib/net45/Google.Apis.Core.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\google.apis.docs.v1\\1.55.0.2379\\lib/net45/Google.Apis.Docs.v1.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\google.apis.drive.v3\\1.55.0.2566\\lib/net45/Google.Apis.Drive.v3.dll",
         "C:\\Users\\peere\\.nuget\\packages\\google.apis.gmail.v1\\1.55.0.2510\\lib/net45/Google.Apis.Gmail.v1.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\google.apis.script.v1\\1.55.0.2555\\lib/net45/Google.Apis.Script.v1.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\google.apis.sheets.v4\\1.55.0.2371\\lib/net45/Google.Apis.Sheets.v4.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\lib/net461/Microsoft.Bcl.AsyncInterfaces.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\mimekit\\2.10.0\\lib/net46/MimeKit.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis.peopleservice.v1\\1.55.0.2567\\lib/net45/Google.Apis.PeopleService.v1.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\htmlagilitypack\\1.11.38\\lib/Net45/HtmlAgilityPack.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\mailkit\\3.1.1\\lib/net46/MailKit.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0\\lib/40/Microsoft.Exchange.WebServices.Auth.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0\\lib/40/Microsoft.Exchange.WebServices.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\lib/net461/Microsoft.Extensions.FileSystemGlobbing.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib/net461/Microsoft.Identity.Client.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.identity.client.desktop\\4.35.1\\lib/net461/Microsoft.Identity.Client.Desktop.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\lib/net461/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2\\lib/net461/Microsoft.IdentityModel.Logging.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2\\lib/net461/Microsoft.IdentityModel.Tokens.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.web.webview2\\1.0.864.35\\lib/net45/Microsoft.Web.WebView2.Core.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.web.webview2\\1.0.864.35\\lib/net45/Microsoft.Web.WebView2.WinForms.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.web.webview2\\1.0.864.35\\lib/net45/Microsoft.Web.WebView2.Wpf.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\mimekit\\3.1.1\\lib/net46/MimeKit.dll",
         "C:\\Users\\peere\\.nuget\\packages\\newtonsoft.json\\13.0.1\\lib/net45/Newtonsoft.Json.dll",
         "C:\\Users\\peere\\.nuget\\packages\\nito.asyncex.context\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Context.dll",
         "C:\\Users\\peere\\.nuget\\packages\\nito.asyncex.coordination\\5.1.0\\lib/netstandard2.0/Nito.AsyncEx.Coordination.dll",
@@ -206,29 +267,30 @@
         "C:\\Users\\peere\\.nuget\\packages\\nito.cancellation\\1.1.0\\lib/netstandard2.0/Nito.Cancellation.dll",
         "C:\\Users\\peere\\.nuget\\packages\\nito.collections.deque\\1.1.0\\lib/netstandard2.0/Nito.Collections.Deque.dll",
         "C:\\Users\\peere\\.nuget\\packages\\nito.disposables\\2.2.0\\lib/net461/Nito.Disposables.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\nodatime\\2.4.7\\lib/net45/NodaTime.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\lib/net40/BouncyCastle.Crypto.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\lib/net40/BouncyCastle.Crypto.dll",
         "C:\\Users\\peere\\.nuget\\packages\\system.buffers\\4.5.1\\lib/net461/System.Buffers.dll",
         "C:\\Users\\peere\\.nuget\\packages\\system.collections.immutable\\5.0.0\\lib/net461/System.Collections.Immutable.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\lib/net461/System.IdentityModel.Tokens.Jwt.dll",
         "C:\\Users\\peere\\.nuget\\packages\\system.io.abstractions\\3.0.10\\lib/net40/System.IO.Abstractions.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\system.linq.async\\5.0.0\\lib/net461/System.Linq.Async.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\system.linq.async.queryable\\5.0.0\\lib/net461/System.Linq.Async.Queryable.dll",
         "C:\\Users\\peere\\.nuget\\packages\\system.memory\\4.5.4\\lib/net461/System.Memory.dll",
         "C:\\Users\\peere\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\lib/net46/System.Numerics.Vectors.dll",
         "C:\\Users\\peere\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
         "C:\\Users\\peere\\.nuget\\packages\\system.threading.tasks.dataflow\\5.0.0\\lib/net461/System.Threading.Tasks.Dataflow.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\lib/net461/System.Threading.Tasks.Extensions.dll",
         "C:\\Users\\peere\\.nuget\\packages\\system.valuetuple\\4.5.0\\lib/net461/System.ValueTuple.dll",
         "C:\\Users\\peere\\.nuget\\packages\\uipath.activities.runtimegovernance\\1.1.6\\lib/net461/UiPath.Activities.RuntimeGovernance.dll",
         "C:\\Users\\peere\\.nuget\\packages\\uipath.connectionclient\\1.3.0\\lib/net461/ConnectionClient.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\uipath.gsuite.activities\\1.17.0-preview\\lib/net461/UiPath.GSuite.Activities.Design.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\uipath.gsuite.activities\\1.17.0-preview\\lib/net461/UiPath.GSuite.Activities.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\uipath.gsuite.activities\\1.17.0-preview\\lib/net461/UiPath.GSuite.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\uipath.gsuite.activities\\1.17.0-preview\\lib/net461/UiPath.Orchestrator.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\lib/net461/Interop.Domino.UiPath.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\lib/net461/Microsoft.Office.Interop.Outlook.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\lib/net461/Microsoft.Office.Interop.Word.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\lib/net461/Office.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\lib/net461/UiPath.Mail.Activities.Design.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\lib/net461/UiPath.Mail.Activities.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\lib/net461/UiPath.Mail.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\lib/net461/UiPath.MainSessionServer.Shared.dll",
         "C:\\Users\\peere\\.nuget\\packages\\uipath.platform\\22.4.2-alpha.2662491\\lib/net461/UiPath.Platform.dll",
         "C:\\Users\\peere\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib/net461/TelemetryClient.dll"
       ],
-      "Path": "C:\\Users\\peere\\.nuget\\packages\\uipath.gsuite.activities\\1.17.0-preview"
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview"
     }
   ],
   "Conflicts": [],
@@ -401,6 +463,21 @@
         {
           "Item1": "Google.Apis.Auth",
           "Item2": "[1.55.0, )"
+        }
+      ]
+    },
+    "HtmlAgilityPack": {
+      "Id": "HtmlAgilityPack",
+      "Version": "1.11.38",
+      "Dependencies": []
+    },
+    "MailKit": {
+      "Id": "MailKit",
+      "Version": "3.1.1",
+      "Dependencies": [
+        {
+          "Item1": "MimeKit",
+          "Item2": "[3.1.1, )"
         }
       ]
     },
@@ -642,6 +719,11 @@
       "Version": "4.7.0",
       "Dependencies": []
     },
+    "Microsoft.Exchange.WebServices": {
+      "Id": "Microsoft.Exchange.WebServices",
+      "Version": "2.2.0",
+      "Dependencies": []
+    },
     "Microsoft.Extensions.Configuration": {
       "Id": "Microsoft.Extensions.Configuration",
       "Version": "3.1.6",
@@ -689,6 +771,11 @@
     "Microsoft.Extensions.DependencyInjection.Abstractions": {
       "Id": "Microsoft.Extensions.DependencyInjection.Abstractions",
       "Version": "3.1.6",
+      "Dependencies": []
+    },
+    "Microsoft.Extensions.FileSystemGlobbing": {
+      "Id": "Microsoft.Extensions.FileSystemGlobbing",
+      "Version": "5.0.0",
       "Dependencies": []
     },
     "Microsoft.Extensions.Logging": {
@@ -750,6 +837,54 @@
         }
       ]
     },
+    "Microsoft.Identity.Client": {
+      "Id": "Microsoft.Identity.Client",
+      "Version": "4.35.1",
+      "Dependencies": []
+    },
+    "Microsoft.Identity.Client.Desktop": {
+      "Id": "Microsoft.Identity.Client.Desktop",
+      "Version": "4.35.1",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.Identity.Client",
+          "Item2": "[4.35.1, )"
+        },
+        {
+          "Item1": "Microsoft.Web.WebView2",
+          "Item2": "[1.0.864.35, )"
+        },
+        {
+          "Item1": "Microsoft.Windows.SDK.Contracts",
+          "Item2": "[10.0.17763.1000, )"
+        }
+      ]
+    },
+    "Microsoft.IdentityModel.JsonWebTokens": {
+      "Id": "Microsoft.IdentityModel.JsonWebTokens",
+      "Version": "6.12.2",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.IdentityModel.Tokens",
+          "Item2": "[6.12.2, )"
+        }
+      ]
+    },
+    "Microsoft.IdentityModel.Logging": {
+      "Id": "Microsoft.IdentityModel.Logging",
+      "Version": "6.12.2",
+      "Dependencies": []
+    },
+    "Microsoft.IdentityModel.Tokens": {
+      "Id": "Microsoft.IdentityModel.Tokens",
+      "Version": "6.12.2",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.IdentityModel.Logging",
+          "Item2": "[6.12.2, )"
+        }
+      ]
+    },
     "Microsoft.Rest.ClientRuntime": {
       "Id": "Microsoft.Rest.ClientRuntime",
       "Version": "2.3.21",
@@ -784,21 +919,36 @@
       "Version": "16.7.30328.74",
       "Dependencies": []
     },
-    "MimeKit": {
-      "Id": "MimeKit",
-      "Version": "2.10.0",
+    "Microsoft.Web.WebView2": {
+      "Id": "Microsoft.Web.WebView2",
+      "Version": "1.0.864.35",
+      "Dependencies": []
+    },
+    "Microsoft.Windows.SDK.Contracts": {
+      "Id": "Microsoft.Windows.SDK.Contracts",
+      "Version": "10.0.17763.1000",
       "Dependencies": [
         {
-          "Item1": "System.Data.DataSetExtensions",
-          "Item2": "[4.5.0, )"
+          "Item1": "System.Runtime.WindowsRuntime",
+          "Item2": "[4.6.0, )"
         },
+        {
+          "Item1": "System.Runtime.WindowsRuntime.UI.Xaml",
+          "Item2": "[4.6.0, )"
+        }
+      ]
+    },
+    "MimeKit": {
+      "Id": "MimeKit",
+      "Version": "3.1.1",
+      "Dependencies": [
         {
           "Item1": "System.Buffers",
           "Item2": "[4.5.1, )"
         },
         {
           "Item1": "Portable.BouncyCastle",
-          "Item2": "[1.8.8, )"
+          "Item2": "[1.9.0, )"
         }
       ]
     },
@@ -947,7 +1097,7 @@
     },
     "Portable.BouncyCastle": {
       "Id": "Portable.BouncyCastle",
-      "Version": "1.8.9",
+      "Version": "1.9.0",
       "Dependencies": []
     },
     "RestSharp": {
@@ -980,10 +1130,19 @@
       "Version": "4.7.0",
       "Dependencies": []
     },
-    "System.Data.DataSetExtensions": {
-      "Id": "System.Data.DataSetExtensions",
-      "Version": "4.5.0",
-      "Dependencies": []
+    "System.IdentityModel.Tokens.Jwt": {
+      "Id": "System.IdentityModel.Tokens.Jwt",
+      "Version": "6.12.2",
+      "Dependencies": [
+        {
+          "Item1": "Microsoft.IdentityModel.JsonWebTokens",
+          "Item2": "[6.12.2, )"
+        },
+        {
+          "Item1": "Microsoft.IdentityModel.Tokens",
+          "Item2": "[6.12.2, )"
+        }
+      ]
     },
     "System.IO.Abstractions": {
       "Id": "System.IO.Abstractions",
@@ -1075,6 +1234,21 @@
       "Id": "System.Runtime.CompilerServices.Unsafe",
       "Version": "4.7.1",
       "Dependencies": []
+    },
+    "System.Runtime.WindowsRuntime": {
+      "Id": "System.Runtime.WindowsRuntime",
+      "Version": "4.6.0",
+      "Dependencies": []
+    },
+    "System.Runtime.WindowsRuntime.UI.Xaml": {
+      "Id": "System.Runtime.WindowsRuntime.UI.Xaml",
+      "Version": "4.6.0",
+      "Dependencies": [
+        {
+          "Item1": "System.Runtime.WindowsRuntime",
+          "Item2": "[4.6.0, )"
+        }
+      ]
     },
     "System.Text.Encoding.CodePages": {
       "Id": "System.Text.Encoding.CodePages",
@@ -1313,6 +1487,72 @@
       "Id": "UiPath.ImageProcessing",
       "Version": "22.4.1",
       "Dependencies": []
+    },
+    "UiPath.Mail.Activities": {
+      "Id": "UiPath.Mail.Activities",
+      "Version": "1.16.0-preview",
+      "Dependencies": [
+        {
+          "Item1": "Google.Apis.Calendar.v3",
+          "Item2": "[1.55.0.2554, )"
+        },
+        {
+          "Item1": "Google.Apis.Gmail.v1",
+          "Item2": "[1.55.0.2510, )"
+        },
+        {
+          "Item1": "Google.Apis.PeopleService.v1",
+          "Item2": "[1.55.0.2567, )"
+        },
+        {
+          "Item1": "HtmlAgilityPack",
+          "Item2": "[1.11.38, )"
+        },
+        {
+          "Item1": "MailKit",
+          "Item2": "[3.1.1, )"
+        },
+        {
+          "Item1": "Microsoft.Exchange.WebServices",
+          "Item2": "[2.2.0, )"
+        },
+        {
+          "Item1": "Microsoft.Extensions.FileSystemGlobbing",
+          "Item2": "[5.0.0, )"
+        },
+        {
+          "Item1": "Microsoft.Identity.Client.Desktop",
+          "Item2": "[4.35.1, )"
+        },
+        {
+          "Item1": "Newtonsoft.Json",
+          "Item2": "[13.0.1, )"
+        },
+        {
+          "Item1": "System.IdentityModel.Tokens.Jwt",
+          "Item2": "[6.12.2, )"
+        },
+        {
+          "Item1": "System.ValueTuple",
+          "Item2": "[4.5.0, )"
+        },
+        {
+          "Item1": "UiPath.Activities.RuntimeGovernance",
+          "Item2": "[1.1.6, )"
+        },
+        {
+          "Item1": "UiPath.ConnectionClient",
+          "Item2": "[1.3.0, )"
+        },
+        {
+          "Item1": "UiPath.Platform",
+          "Item2": "[22.4.0, )"
+        },
+        {
+          "Item1": "UiPath.Telemetry.Client",
+          "Item2": "[1.5.3, )"
+        }
+      ]
     },
     "UiPath.OCR.Activities": {
       "Id": "UiPath.OCR.Activities",
@@ -1625,8 +1865,8 @@
         "Version": "1.55.0"
       },
       "Assemblies": [
-        "C:\\Users\\peere\\.nuget\\packages\\google.apis\\1.55.0\\lib\\net45\\Google.Apis.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\google.apis\\1.55.0\\lib\\net45\\Google.Apis.PlatformServices.dll"
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis\\1.55.0\\lib\\net45\\Google.Apis.PlatformServices.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis\\1.55.0\\lib\\net45\\Google.Apis.dll"
       ],
       "Path": "C:\\Users\\peere\\.nuget\\packages\\google.apis\\1.55.0"
     },
@@ -1636,8 +1876,8 @@
         "Version": "1.55.0"
       },
       "Assemblies": [
-        "C:\\Users\\peere\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib\\net461\\Google.Apis.Auth.dll",
-        "C:\\Users\\peere\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib\\net461\\Google.Apis.Auth.PlatformServices.dll"
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib\\net461\\Google.Apis.Auth.PlatformServices.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\google.apis.auth\\1.55.0\\lib\\net461\\Google.Apis.Auth.dll"
       ],
       "Path": "C:\\Users\\peere\\.nuget\\packages\\google.apis.auth\\1.55.0"
     },
@@ -1720,6 +1960,26 @@
         "C:\\Users\\peere\\.nuget\\packages\\google.apis.sheets.v4\\1.55.0.2371\\lib\\net45\\Google.Apis.Sheets.v4.dll"
       ],
       "Path": "C:\\Users\\peere\\.nuget\\packages\\google.apis.sheets.v4\\1.55.0.2371"
+    },
+    {
+      "Package": {
+        "Id": "HtmlAgilityPack",
+        "Version": "1.11.38"
+      },
+      "Assemblies": [
+        "C:\\Users\\peere\\.nuget\\packages\\htmlagilitypack\\1.11.38\\lib\\Net45\\HtmlAgilityPack.dll"
+      ],
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\htmlagilitypack\\1.11.38"
+    },
+    {
+      "Package": {
+        "Id": "MailKit",
+        "Version": "3.1.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\peere\\.nuget\\packages\\mailkit\\3.1.1\\lib\\net46\\MailKit.dll"
+      ],
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\mailkit\\3.1.1"
     },
     {
       "Package": {
@@ -1881,6 +2141,17 @@
     },
     {
       "Package": {
+        "Id": "Microsoft.Exchange.WebServices",
+        "Version": "2.2.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0\\lib\\40\\Microsoft.Exchange.WebServices.Auth.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0\\lib\\40\\Microsoft.Exchange.WebServices.dll"
+      ],
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\microsoft.exchange.webservices\\2.2.0"
+    },
+    {
+      "Package": {
         "Id": "Microsoft.Extensions.Configuration",
         "Version": "3.1.6"
       },
@@ -1931,6 +2202,16 @@
     },
     {
       "Package": {
+        "Id": "Microsoft.Extensions.FileSystemGlobbing",
+        "Version": "5.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\lib\\net461\\Microsoft.Extensions.FileSystemGlobbing.dll"
+      ],
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0"
+    },
+    {
+      "Package": {
         "Id": "Microsoft.Extensions.Logging",
         "Version": "3.1.6"
       },
@@ -1968,6 +2249,56 @@
         "C:\\Users\\peere\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.6\\lib\\netstandard2.0\\Microsoft.Extensions.Primitives.dll"
       ],
       "Path": "C:\\Users\\peere\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.6"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.Identity.Client",
+        "Version": "4.35.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.identity.client\\4.35.1\\lib\\net461\\Microsoft.Identity.Client.dll"
+      ],
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\microsoft.identity.client\\4.35.1"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.Identity.Client.Desktop",
+        "Version": "4.35.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.identity.client.desktop\\4.35.1\\lib\\net461\\Microsoft.Identity.Client.Desktop.dll"
+      ],
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\microsoft.identity.client.desktop\\4.35.1"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.IdentityModel.JsonWebTokens",
+        "Version": "6.12.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2\\lib\\net461\\Microsoft.IdentityModel.JsonWebTokens.dll"
+      ],
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.12.2"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.IdentityModel.Logging",
+        "Version": "6.12.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2\\lib\\net461\\Microsoft.IdentityModel.Logging.dll"
+      ],
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\microsoft.identitymodel.logging\\6.12.2"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.IdentityModel.Tokens",
+        "Version": "6.12.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2\\lib\\net461\\Microsoft.IdentityModel.Tokens.dll"
+      ],
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.12.2"
     },
     {
       "Package": {
@@ -2011,13 +2342,33 @@
     },
     {
       "Package": {
-        "Id": "MimeKit",
-        "Version": "2.10.0"
+        "Id": "Microsoft.Web.WebView2",
+        "Version": "1.0.864.35"
       },
       "Assemblies": [
-        "C:\\Users\\peere\\.nuget\\packages\\mimekit\\2.10.0\\lib\\net46\\MimeKit.dll"
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.web.webview2\\1.0.864.35\\lib\\net45\\Microsoft.Web.WebView2.Core.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.web.webview2\\1.0.864.35\\lib\\net45\\Microsoft.Web.WebView2.WinForms.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\microsoft.web.webview2\\1.0.864.35\\lib\\net45\\Microsoft.Web.WebView2.Wpf.dll"
       ],
-      "Path": "C:\\Users\\peere\\.nuget\\packages\\mimekit\\2.10.0"
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\microsoft.web.webview2\\1.0.864.35"
+    },
+    {
+      "Package": {
+        "Id": "Microsoft.Windows.SDK.Contracts",
+        "Version": "10.0.17763.1000"
+      },
+      "Assemblies": [],
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.17763.1000"
+    },
+    {
+      "Package": {
+        "Id": "MimeKit",
+        "Version": "3.1.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\peere\\.nuget\\packages\\mimekit\\3.1.1\\lib\\net46\\MimeKit.dll"
+      ],
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\mimekit\\3.1.1"
     },
     {
       "Package": {
@@ -2163,12 +2514,12 @@
     {
       "Package": {
         "Id": "Portable.BouncyCastle",
-        "Version": "1.8.9"
+        "Version": "1.9.0"
       },
       "Assemblies": [
-        "C:\\Users\\peere\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\lib\\net40\\BouncyCastle.Crypto.dll"
+        "C:\\Users\\peere\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\lib\\net40\\BouncyCastle.Crypto.dll"
       ],
-      "Path": "C:\\Users\\peere\\.nuget\\packages\\portable.bouncycastle\\1.8.9"
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\portable.bouncycastle\\1.9.0"
     },
     {
       "Package": {
@@ -2222,13 +2573,13 @@
     },
     {
       "Package": {
-        "Id": "System.Data.DataSetExtensions",
-        "Version": "4.5.0"
+        "Id": "System.IdentityModel.Tokens.Jwt",
+        "Version": "6.12.2"
       },
       "Assemblies": [
-        "C:\\Users\\peere\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\lib\\net45\\_._"
+        "C:\\Users\\peere\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2\\lib\\net461\\System.IdentityModel.Tokens.Jwt.dll"
       ],
-      "Path": "C:\\Users\\peere\\.nuget\\packages\\system.data.datasetextensions\\4.5.0"
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.12.2"
     },
     {
       "Package": {
@@ -2329,6 +2680,26 @@
         "C:\\Users\\peere\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\lib\\net461\\System.Runtime.CompilerServices.Unsafe.dll"
       ],
       "Path": "C:\\Users\\peere\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1"
+    },
+    {
+      "Package": {
+        "Id": "System.Runtime.WindowsRuntime",
+        "Version": "4.6.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\peere\\.nuget\\packages\\system.runtime.windowsruntime\\4.6.0\\lib\\net45\\_._"
+      ],
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\system.runtime.windowsruntime\\4.6.0"
+    },
+    {
+      "Package": {
+        "Id": "System.Runtime.WindowsRuntime.UI.Xaml",
+        "Version": "4.6.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\peere\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.6.0\\lib\\net45\\_._"
+      ],
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.6.0"
     },
     {
       "Package": {
@@ -2468,6 +2839,23 @@
         "C:\\Users\\peere\\.nuget\\packages\\uipath.imageprocessing\\22.4.1\\lib\\net461\\UiPath.ImageProcessingInterop.dll"
       ],
       "Path": "C:\\Users\\peere\\.nuget\\packages\\uipath.imageprocessing\\22.4.1"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Mail.Activities",
+        "Version": "1.16.0-preview"
+      },
+      "Assemblies": [
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\lib\\net461\\Interop.Domino.UiPath.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\lib\\net461\\Microsoft.Office.Interop.Outlook.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\lib\\net461\\Microsoft.Office.Interop.Word.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\lib\\net461\\Office.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\lib\\net461\\UiPath.Mail.Activities.Design.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\lib\\net461\\UiPath.Mail.Activities.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\lib\\net461\\UiPath.Mail.dll",
+        "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview\\lib\\net461\\UiPath.MainSessionServer.Shared.dll"
+      ],
+      "Path": "C:\\Users\\peere\\.nuget\\packages\\uipath.mail.activities\\1.16.0-preview"
     },
     {
       "Package": {

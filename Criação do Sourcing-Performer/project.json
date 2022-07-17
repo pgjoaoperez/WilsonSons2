@@ -5,6 +5,7 @@
   "dependencies": {
     "UiPath.Excel.Activities": "[2.12.3]",
     "UiPath.GSuite.Activities": "[1.17.0-preview]",
+    "UiPath.Mail.Activities": "[1.16.0-preview]",
     "UiPath.System.Activities": "[22.4.1]",
     "UiPath.Testing.Activities": "[22.4.3]",
     "UiPath.UIAutomation.Activities": "[22.4.6]",
@@ -90,6 +91,12 @@
         "testCaseId": "b0a949f6-238f-40e2-970e-2b3daf7f76eb",
         "testCaseType": "TestCase",
         "fileName": "Coupa\\Teste\\CoupaRequisitions_Test.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "9524f785-bc62-4559-ba96-42c0eb5d40b4",
+        "testCaseType": "TestCase",
+        "fileName": "Motivos Requisição\\CasodeTeste_Motivo_API.xaml"
       }
     ],
     "modernBehavior": true

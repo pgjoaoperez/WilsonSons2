@@ -1,0 +1,150 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="EnviarEmail" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_destinatário" Type="InArgument(x:String)" />
+    <x:Property Name="in_assunto" Type="InArgument(x:String)" />
+    <x:Property Name="in_corpo" Type="InArgument(x:String)" />
+    <x:Property Name="in_anexos" Type="InArgument(scg:List(x:String))" />
+    <x:Property Name="in_loginEmail" Type="InArgument(x:String)" />
+    <x:Property Name="in_senhaEmail" Type="InArgument(ss:SecureString)" />
+    <x:Property Name="in_cópia" Type="InArgument(x:String)" />
+    <x:Property Name="in_cópiaOculta" Type="InArgument(x:String)" />
+    <x:Property Name="in_email" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:EnviarEmail.in_cópia>
+    <InArgument x:TypeArguments="x:String" />
+  </this:EnviarEmail.in_cópia>
+  <this:EnviarEmail.in_email>
+    <InArgument x:TypeArguments="x:String" />
+  </this:EnviarEmail.in_email>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1586,1214</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>EnviarEmail_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="36">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System.Reflection</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="58">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Cryptography</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="EnviarEmail" sap:VirtualizedContainerService.HintSize="526,1149" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:Exception" Name="ex" />
+      <Variable x:TypeArguments="x:String" Name="address" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:Comment sap:VirtualizedContainerService.HintSize="484,189" sap2010:WorkflowViewState.IdRef="Comment_1" Text="Por algum motivo a atividade de enviar email SMTP da UI Path é bastante bugada e pouco confiável. Ora ela falha sem motivo aparente, ora ela fica executando pra sempre sem dar time-out...&#xA;&#xA;Por isso tentaremos usar os componentes de e-mail SMTP do .NET diretamente" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Enviando e-mail...&quot;]" />
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="out_ex = Nothing&#xD;&#xA;&#xD;&#xA;Try&#xD;&#xA;&#x9;Dim smtpClient As New SmtpClient(&quot;smtp.gmail.com&quot;)&#xD;&#xA;&#x9;smtpClient.Credentials = New NetworkCredential(in_loginEmail, in_senhaEmail)&#xD;&#xA;&#x9;smtpClient.Port = 587&#xD;&#xA;&#x9;smtpClient.EnableSsl = True&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;Dim msg As New MailMessage()&#xD;&#xA;&#x9;msg.From = New MailAddress(in_remetente)&#xD;&#xA;&#x9;msg.Subject = in_assunto&#xD;&#xA;&#x9;msg.Body = in_corpo&#xD;&#xA; &#x9;msg.IsBodyHtml= True&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;Dim destinatários As String() = in_destinatário.Split(&quot;;&quot;c)&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;console.WriteLine(&quot;Endereço(s) de destinatário: &quot; + in_destinatário)&#xD;&#xA;&#x9;For Each destino As String In destinatários&#xD;&#xA;&#x9;&#x9;msg.To.Add(destino.Trim)&#xD;&#xA;&#x9;Next destino&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;If String.IsNullOrEmpty(in_Cópia) Then&#xD;&#xA;&#x9;&#x9;Console.WriteLine(&quot;Não há endereços em cópia.&quot;)&#xD;&#xA;&#x9;Else&#xD;&#xA;&#x9;&#x9;For Each endereçoCópia As String In in_Cópia.Split(&quot;;&quot;c)&#xD;&#xA;            console.WriteLine(&quot;Endereço em cópia: &quot; + endereçoCópia)&#xD;&#xA;&#x9;&#x9;&#x9;msg.CC.Add(New MailAddress(endereçoCópia.Trim))&#xD;&#xA;&#x9;&#x9;Next endereçoCópia&#xD;&#xA;&#x9;End If&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;If String.IsNullOrEmpty(in_CópiaOculta) Then&#xD;&#xA;&#x9;&#x9;Console.WriteLine(&quot;Não há endereços para cópia oculta.&quot;)&#xD;&#xA;&#x9;Else&#x9;&#xD;&#xA;&#x9;&#x9;For Each endereçoCópiaOculta As String In in_CópiaOculta.Split(&quot;;&quot;c)&#xD;&#xA;            console.WriteLine(&quot;Endereço em cópia oculta: &quot; + endereçoCópiaOculta)&#xD;&#xA;&#x9;&#x9;&#x9;msg.Bcc.Add(New MailAddress(endereçoCópiaOculta.Trim))&#xD;&#xA;&#x9;&#x9;Next endereçoCópiaOculta&#xD;&#xA;&#x9;End If&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;If in_anexos IsNot Nothing Then&#xD;&#xA;&#x9;&#x9;For Each anexo As String In in_anexos&#xD;&#xA;            Console.WriteLine( &quot;Anexando arquivo no e-mail: &quot;+anexo)&#xD;&#xA;&#x9;&#x9;&#x9;msg.Attachments.Add(New Attachment(anexo))&#xD;&#xA;&#x9;&#x9;Next anexo&#xD;&#xA;&#x9;Else &#xD;&#xA;&#x9;&#x9;Console.WriteLine(&quot;Não há arquivos para anexar&quot;)&#xD;&#xA;&#x9;End If&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;smtpClient.Send(msg)&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;' Liberar os arquivos anexos&#xD;&#xA;&#x9;msg.Dispose()&#xD;&#xA;Catch ex As Exception&#xD;&#xA;&#x9;out_ex = ex&#xD;&#xA;End Try&#xD;&#xA;" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="484,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <OutArgument x:TypeArguments="s:Exception" x:Key="out_ex">
+          <mva:VisualBasicReference x:TypeArguments="s:Exception" ExpressionText="ex" />
+        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_loginEmail">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_loginEmail" />
+        </InArgument>
+        <InArgument x:TypeArguments="ss:SecureString" x:Key="in_senhaEmail">
+          <mva:VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="in_senhaEmail" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_destinatário">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_destinatário" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_assunto">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_assunto" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_corpo">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_corpo" />
+        </InArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_anexos">
+          <mva:VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="in_anexos" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_remetente">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_email" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_cópia">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_cópia" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_cópiaOculta">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_cópiaOculta" />
+        </InArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <If sap2010:Annotation.AnnotationText="Se alguma exceção ocorrer no invoke code, lançar..." Condition="[ex IsNot Nothing]" sap:VirtualizedContainerService.HintSize="484,478" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Exceção!&quot;+vbLf+ex.Message]" />
+          <Throw Exception="[ex]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+        </Sequence>
+      </If.Then>
+    </If>
+  </Sequence>
+</Activity>

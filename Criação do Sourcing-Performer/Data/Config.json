@@ -1,6 +1,6 @@
 {
     "Constants": {
-        "logF_BusinessProcessName": "",
+        "logF_BusinessProcessName": "A",
         "OrchestratorQueueName": "Criação do Sourcing",
         "OrchestratorQueueFolder": "Wilson Sons",
         "MaxRetryNumber":	0,
@@ -12,7 +12,8 @@
         "LogMessage_ApplicationException": "System exception."
     },
     "Settings": {
-        "CoupaURL": "https://wilsonsons-test.coupahost.com/sessions/support_login"
+        "CoupaURL": "https://wilsonsons-test.coupahost.com/sessions/support_login",
+        "Email_destinatario": "vjrmarculino@gmail.com"
     },
 
     "Assets": {
@@ -22,6 +23,10 @@
         "LoginCoupa": {
             "User": "userCoupa",
             "Password": "passwordCoupa"
+        },
+        "ContaEmail":{
+            "User": "User_email",
+            "Password": "Password_email"
         }
     }
 
