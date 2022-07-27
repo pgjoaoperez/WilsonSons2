@@ -4,6 +4,11 @@
     <x:Property Name="in_id_planilha" Type="InArgument(x:String)" />
     <x:Property Name="in_valor_maximo_robo" Type="InArgument(x:String)" />
     <x:Property Name="out_template_sourcing" Type="OutArgument(x:String)" />
+    <x:Property Name="out_urgencia" Type="OutArgument(stj:JsonElement)" />
+    <x:Property Name="out_endereco_code" Type="OutArgument(stj:JsonElement)" />
+    <x:Property Name="out_planta" Type="OutArgument(stj:JsonElement)" />
+    <x:Property Name="out_commodities" Type="OutArgument(stj:JsonElement)" />
+    <x:Property Name="out_tipo_requisition" Type="OutArgument(stj:JsonElement)" />
   </x:Members>
   <this:CoupaRequisitions.in_id_planilha>
     <InArgument x:TypeArguments="x:String" />
@@ -11,7 +16,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1829,4978</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1479,1687</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CoupaRequisitions_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
@@ -123,7 +128,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="CoupaRequisitions" sap:VirtualizedContainerService.HintSize="764,4913" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CoupaRequisitions" sap:VirtualizedContainerService.HintSize="568,1622" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="stj:JsonElement" Name="obj" />
       <Variable x:TypeArguments="x:Int32" Name="status_get" />
@@ -131,11 +136,9 @@
       <Variable x:TypeArguments="stj:JsonElement" Name="taggings" />
       <Variable x:TypeArguments="x:Boolean" Name="existe_tag" />
       <Variable x:TypeArguments="stj:JsonElement" Name="nome_tag" />
-      <Variable x:TypeArguments="stj:JsonElement" Name="commodities" />
       <Variable x:TypeArguments="stj:JsonElement" Name="pegar_commodity" />
       <Variable x:TypeArguments="x:Decimal" Name="valor_requisicao" />
       <Variable x:TypeArguments="stj:JsonElement" Name="id_current_approval" />
-      <Variable x:TypeArguments="stj:JsonElement" Name="planta" />
       <Variable x:TypeArguments="x:String" Name="template_sourcing" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -143,7 +146,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Traz os itens da requisição." DisplayName="Get Http" sap:VirtualizedContainerService.HintSize="722,822" sap2010:WorkflowViewState.IdRef="Sequence_11">
+    <Sequence sap2010:Annotation.AnnotationText="Traz os itens da requisição." DisplayName="Get Http" sap:VirtualizedContainerService.HintSize="526,908" sap2010:WorkflowViewState.IdRef="Sequence_11">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -151,7 +154,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" AuthenticationType="None" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://wilsonsons-test.coupahost.com/api/requisitions/&quot;+in_requisicao+&quot;?filter=rpa_req_comprador&quot;]" sap:VirtualizedContainerService.HintSize="484,58" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" OAuth2Token="eyJ0eXAiOiJhdCtKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjRmOjMzOmI3OmY3OjVmOjg4OjQ3OmRhOjAzOmVmOjkzOjQ1OmU5OmNjOmZiOjg3In0.eyJpc3MiOiJodHRwczovL3dpbHNvbnNvbnMtdGVzdC5jb3VwYWhvc3QuY29tIiwiaWF0IjoxNjU4NTk0NTM3LCJleHAiOjE2NTg2ODA5MzcsInN1YiI6IjRkZTE3MGQzOGY1NWU5MWFjODdkNGJmNmE2OGM2NzdkIiwianRpIjoiOTUxZTFkYTYtYmE3OS00ZjhhLThkZDMtMmJlNTVkODk5NjE5IiwiY2xpZW50X2lkIjoiNGRlMTcwZDM4ZjU1ZTkxYWM4N2Q0YmY2YTY4YzY3N2QiLCJzY29wZSI6ImNvcmUucmVxdWlzaXRpb24ucmVhZCBjb3JlLnJlcXVpc2l0aW9uLndyaXRlIiwiYXVkIjpbImNvcmUiXX0.J44fRReizZMu-ZT5KAEgUG-4nn3ejWVPqAq1e4pZsfp4eRFWkSLS42F8IvKxXpQNTn0FWr7VEaKtxLISUDRyXGNNr6ugI481wBHAAcivKPWYE9y9zoKLGRj92WizAS2gEKLeBhYX_aiC2_GfgrXkkZ2g9gflrDN7bqBvZrv2NqWmq1_Qf4FgZlfPDaHvhY2xAsXfi49eCWN-bjKDIUdYTUV2qWWkNldlkALiWg32FN4J83D4Ss7LRFSUV1tWwvN1UFHdD6qAKry9WOvz3nd_YsEEpDW64924bik5g9XVTiktRjnfM4TsH7pXif_iUwxywlN1MdXxN-pXlrIeWJ9STw" Result="[retorno_requisicao]" StatusCode="[status_get]" TimeoutMS="15000">
+      <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" AuthenticationType="None" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://wilsonsons-test.coupahost.com/api/requisitions/&quot;+in_requisicao+&quot;?filter=rpa_req_comprador&quot;]" sap:VirtualizedContainerService.HintSize="484,57" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" OAuth2Token="eyJ0eXAiOiJhdCtKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjRmOjMzOmI3OmY3OjVmOjg4OjQ3OmRhOjAzOmVmOjkzOjQ1OmU5OmNjOmZiOjg3In0.eyJpc3MiOiJodHRwczovL3dpbHNvbnNvbnMtdGVzdC5jb3VwYWhvc3QuY29tIiwiaWF0IjoxNjU4OTU5NzYwLCJleHAiOjE2NTkwNDYxNjAsInN1YiI6IjRkZTE3MGQzOGY1NWU5MWFjODdkNGJmNmE2OGM2NzdkIiwianRpIjoiOTFjYzUyYWEtNzdmOS00ZjJiLWFlMmMtZWFkYmExMzg4ZmI4IiwiY2xpZW50X2lkIjoiNGRlMTcwZDM4ZjU1ZTkxYWM4N2Q0YmY2YTY4YzY3N2QiLCJzY29wZSI6ImNvcmUucmVxdWlzaXRpb24ucmVhZCBjb3JlLnJlcXVpc2l0aW9uLndyaXRlIiwiYXVkIjpbImNvcmUiXX0.RRhnZfDgBavQJFlfjsVXUFcfiP8auvY7ifN9mS0AUqtQibtN6t4tK7_hncxrwvn0AClVnVw6nEaKkLKtAerWBYMXVyehH3jlDpcYU-gdILvi6pHBaxGudO-A1P5CDMNPlTshNfYKecO4Y71XbhGDTpo1QPXGR56GTe5aZt55BD_ScNcAxkx9JSaGgp3qzdp-nTrxMaaNr3n2XOkuipHevpVdnGuTjtmVFHLSlDxTax_Oc64UpjH7V0SUOVrHEdv3z8kNwrD6OBhZt8mYYZApf3RcVXDyWy-fM3HLrCbJOSm7mT7EdmrlDtrR1f1tQvj8SlVWuHqthrtqnLf4OQNmPg" Result="[retorno_requisicao]" StatusCode="[status_get]" TimeoutMS="15000">
         <ui:HttpClient.Attachments>
           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
         </ui:HttpClient.Attachments>
@@ -168,8 +171,8 @@
           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
         </ui:HttpClient.UrlSegments>
       </ui:HttpClient>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,109" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;O status da requisição foi: &quot; + status_get.ToString]" />
-      <If sap2010:Annotation.AnnotationText="Se status &lt;&gt; 200, é lançado uma exceção." Condition="[status_get &lt;&gt;200]" sap:VirtualizedContainerService.HintSize="484,281" sap2010:WorkflowViewState.IdRef="If_2">
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;O status da requisição foi: &quot; + status_get.ToString]" />
+      <If sap2010:Annotation.AnnotationText="Se status &lt;&gt; 200, é lançado uma exceção." Condition="[status_get &lt;&gt;200]" sap:VirtualizedContainerService.HintSize="484,278" sap2010:WorkflowViewState.IdRef="If_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -190,9 +193,9 @@
           </Sequence>
         </If.Else>
       </If>
-      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="484,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="484,224" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
         <ui:MultipleAssign.AssignOperations>
-          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
               <ui:AssignOperation.To>
                 <OutArgument x:TypeArguments="stj:JsonElement">[obj]</OutArgument>
@@ -203,10 +206,34 @@
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_28">
               <ui:AssignOperation.To>
-                <OutArgument x:TypeArguments="stj:JsonElement">[planta]</OutArgument>
+                <OutArgument x:TypeArguments="stj:JsonElement">[out_planta]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
                 <InArgument x:TypeArguments="stj:JsonElement">[obj.GetProperty("requisition-lines")(0).GetProperty("custom-fields").GetProperty("centro-logstico").GetProperty("external-ref-code")]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_40">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="stj:JsonElement">[out_endereco_code]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="stj:JsonElement">[obj.GetProperty("ship-to-address").GetProperty("location-code")]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_41">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="stj:JsonElement">[out_urgencia]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="stj:JsonElement">[obj.GetProperty("custom-fields").GetProperty("urgncia")]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_42">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="stj:JsonElement">[out_tipo_requisition]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="stj:JsonElement">[obj.GetProperty("custom-fields").GetProperty("tipo-de-requisio")]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
           </scg:List>
@@ -219,11 +246,11 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:MultipleAssign>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Verifica se a requisição possui Tag XXX." DisplayName="Tag Retirado?" sap:VirtualizedContainerService.HintSize="722,1497" sap2010:WorkflowViewState.IdRef="Sequence_13">
+    <Sequence sap2010:Annotation.AnnotationText="Verifica se a requisição possui Tag XXX." DisplayName="Tag Retirado?" sap:VirtualizedContainerService.HintSize="526,108" sap2010:WorkflowViewState.IdRef="Sequence_13">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -249,18 +276,18 @@
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
-      <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="680,1203" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+      <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="680,1200" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
         <ui:IfElseIf.ConditionBlocks>
           <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
             <ui:IfElseIfBlock BlockType="If" Condition="[existe_tag]">
               <ui:IfElseIfBlock.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="629,1007" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                <Sequence sap:VirtualizedContainerService.HintSize="629,1006" sap2010:WorkflowViewState.IdRef="Sequence_26">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEach x:TypeArguments="stj:JsonElement" CurrentIndex="{x:Null}" DisplayName="ForEach&lt;JsonElement&gt;" sap:VirtualizedContainerService.HintSize="587,915" sap2010:WorkflowViewState.IdRef="ForEach`1_18" Values="[taggings.EnumerateArray]">
+                  <ui:ForEach x:TypeArguments="stj:JsonElement" CurrentIndex="{x:Null}" DisplayName="ForEach&lt;JsonElement&gt;" sap:VirtualizedContainerService.HintSize="587,914" sap2010:WorkflowViewState.IdRef="ForEach`1_18" Values="[taggings.EnumerateArray]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="stj:JsonElement">
                         <ActivityAction.Argument>
@@ -361,7 +388,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:IfElseIf>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Verifica se a requisição possui todas as commodities iguais." DisplayName="Commodities Iguais?" sap:VirtualizedContainerService.HintSize="722,112" sap2010:WorkflowViewState.IdRef="Sequence_19">
+    <Sequence sap2010:Annotation.AnnotationText="Verifica se a requisição possui todas as commodities iguais." DisplayName="Commodities Iguais?" sap:VirtualizedContainerService.HintSize="526,108" sap2010:WorkflowViewState.IdRef="Sequence_19">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_commodities" />
       </Sequence.Variables>
@@ -404,7 +431,7 @@
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
                       <ui:AssignOperation.To>
-                        <OutArgument x:TypeArguments="stj:JsonElement">[commodities]</OutArgument>
+                        <OutArgument x:TypeArguments="stj:JsonElement">[out_commodities]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
                         <InArgument x:TypeArguments="stj:JsonElement">[commodity.GetProperty("commodity").GetProperty("name")]</InArgument>
@@ -413,8 +440,8 @@
                   </scg:List>
                 </ui:MultipleAssign.AssignOperations>
               </ui:MultipleAssign>
-              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{commodities}]" DataTable="[dt_commodities]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="431,185" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="431,106" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[commodities]" />
+              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{out_commodities}]" DataTable="[dt_commodities]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="431,185" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="431,106" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[out_commodities]" />
             </Sequence>
           </ActivityAction>
         </ui:ForEach.Body>
@@ -454,7 +481,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Verifica se o valor da requisição está dentro do limite aceito pelo robô." DisplayName="Valor Requisição" sap:VirtualizedContainerService.HintSize="722,128" sap2010:WorkflowViewState.IdRef="Sequence_23">
+    <Sequence sap2010:Annotation.AnnotationText="Verifica se o valor da requisição está dentro do limite aceito pelo robô." DisplayName="Valor Requisição" sap:VirtualizedContainerService.HintSize="526,123" sap2010:WorkflowViewState.IdRef="Sequence_23">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="valor_maximo_robo" />
         <Variable x:TypeArguments="x:String" Name="total" />
@@ -491,7 +518,7 @@
                 <OutArgument x:TypeArguments="x:String">[valor_maximo_robo]</OutArgument>
               </ui:AssignOperation.To>
               <ui:AssignOperation.Value>
-                <InArgument x:TypeArguments="x:String">[in_valor_maximo_robo.Replace("R$", "")]</InArgument>
+                <InArgument x:TypeArguments="x:String">[in_valor_maximo_robo.Replace("$", "").Replace(".", "").Replace(",", ".")]</InArgument>
               </ui:AssignOperation.Value>
             </ui:AssignOperation>
             <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_38">
@@ -505,21 +532,21 @@
           </scg:List>
         </ui:MultipleAssign.AssignOperations>
       </ui:MultipleAssign>
-      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,109" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Valor da requisição &quot; + in_requisicao + &quot;: R$ &quot; + valor_requisicao.ToString + vbLf +&#xA;&quot;Valor limite : &quot; + in_valor_maximo_robo]" />
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Valor da requisição &quot; + in_requisicao + &quot;: &quot; + valor_requisicao.ToString + vbLf +&#xA;&quot;Valor limite : &quot; + in_valor_maximo_robo]" />
       <If Condition="[valor_requisicao &gt; valor_robo]" sap:VirtualizedContainerService.HintSize="484,250" sap2010:WorkflowViewState.IdRef="If_5">
         <If.Then>
           <Throw Exception="[New BusinessRuleException(&quot;Valor da requisição maior do que o permitido&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_7" />
         </If.Then>
       </If>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Consulta a base e verifica se existe pelo menos um fornecedor." DisplayName="Consultar vendor_list" sap:VirtualizedContainerService.HintSize="722,2102" sap2010:WorkflowViewState.IdRef="Sequence_22">
+    <Sequence sap2010:Annotation.AnnotationText="Consulta a base e verifica se existe pelo menos um fornecedor." DisplayName="Consultar vendor_list" sap:VirtualizedContainerService.HintSize="526,123" sap2010:WorkflowViewState.IdRef="Sequence_22">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_vendor_list" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -568,7 +595,7 @@
                   <OutArgument x:TypeArguments="x:String">[commodities_filtro]</OutArgument>
                 </ui:AssignOperation.To>
                 <ui:AssignOperation.Value>
-                  <InArgument x:TypeArguments="x:String">[commodities.ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[out_commodities.ToString]</InArgument>
                 </ui:AssignOperation.Value>
               </ui:AssignOperation>
               <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_31">
@@ -576,7 +603,7 @@
                   <OutArgument x:TypeArguments="x:String">[planta_filtro]</OutArgument>
                 </ui:AssignOperation.To>
                 <ui:AssignOperation.Value>
-                  <InArgument x:TypeArguments="x:String">[planta.ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[out_planta.ToString]</InArgument>
                 </ui:AssignOperation.Value>
               </ui:AssignOperation>
             </scg:List>
