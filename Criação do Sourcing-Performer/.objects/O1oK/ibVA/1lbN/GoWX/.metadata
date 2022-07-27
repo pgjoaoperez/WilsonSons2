@@ -1,0 +1,16 @@
+﻿{
+  "Id": "GoWXuKskWE2wbOhqCenR1w",
+  "Reference": "FB9c7qXAV0OOXtfk_NLfvg/GoWXuKskWE2wbOhqCenR1w",
+  "ParentRef": "FB9c7qXAV0OOXtfk_NLfvg/1lbNw51Ayk-dt_-M_rqbfQ",
+  "Name": "CoupaBoasVindas",
+  "Type": "Element",
+  "TaxonomyType": "Elemento",
+  "Created": "2022-07-27T23:32:57.4156556Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.4.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-27T23:33:55.3624423Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.4.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
