@@ -3,7 +3,7 @@
   "description": "Criação do Sourcing-Performer:\r\nProcesso responsável pela Criação do Sourcing.",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.12.3]",
+    "UiPath.Excel.Activities": "[2.13.0-preview]",
     "UiPath.GSuite.Activities": "[1.17.0-preview]",
     "UiPath.Mail.Activities": "[1.16.0-preview]",
     "UiPath.System.Activities": "[22.4.1]",

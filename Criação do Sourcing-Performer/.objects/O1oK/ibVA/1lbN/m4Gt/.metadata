@@ -1,0 +1,16 @@
+﻿{
+  "Id": "m4GtJr14L02t2MUs0GzEAg",
+  "Reference": "FB9c7qXAV0OOXtfk_NLfvg/m4GtJr14L02t2MUs0GzEAg",
+  "ParentRef": "FB9c7qXAV0OOXtfk_NLfvg/1lbNw51Ayk-dt_-M_rqbfQ",
+  "Name": "CoupaFecharPopup",
+  "Type": "Element",
+  "TaxonomyType": "Elemento",
+  "Created": "2022-07-27T23:35:08.6508611Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.4.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-27T23:35:34.426977Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.4.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
