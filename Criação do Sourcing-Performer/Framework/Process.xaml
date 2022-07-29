@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1479,1208</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1549,1537</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="45">
@@ -103,11 +103,10 @@
       <AssemblyReference>System.Data.Entity</AssemblyReference>
       <AssemblyReference>UiPath.GSuite</AssemblyReference>
       <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>System.Text.Json</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="473,1143" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="493,1472" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="requisicao" />
       <Variable x:TypeArguments="x:String" Name="id_planilha" />
@@ -126,7 +125,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="451,131" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -137,10 +136,18 @@
               <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Requisição").ToString]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[requisicao]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">3514</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <Sequence sap2010:Annotation.AnnotationText="Esta sequência serve para ler a base de configurações (Google Sheets) e armazenar o valor máximo que o robô pode operar." DisplayName="Get Value in Sheet" sap:VirtualizedContainerService.HintSize="431,160" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="Esta sequência serve para ler a base de configurações (Google Sheets) e armazenar o valor máximo que o robô pode operar." DisplayName="Get Value in Sheet" sap:VirtualizedContainerService.HintSize="451,153" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -179,77 +186,47 @@
         </sap:WorkflowViewStateService.ViewState>
       </uga:GSuiteApplicationScope>
     </Sequence>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CoupaRequisitions workflow" sap:VirtualizedContainerService.HintSize="431,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Coupa\CoupaRequisitions.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CoupaRequisitions workflow" sap:VirtualizedContainerService.HintSize="451,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Coupa\CoupaRequisitions.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_requisicao">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="requisicao" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_id_planilha">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="id_planilha" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_valor_maximo_robo">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="valor_maximo_robo" />
-        </InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_template_sourcing">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="template_sourcing" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="stj:JsonElement" x:Key="out_urgencia">
-          <mva:VisualBasicReference x:TypeArguments="stj:JsonElement" ExpressionText="urgencia" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="stj:JsonElement" x:Key="out_endereco_code">
-          <mva:VisualBasicReference x:TypeArguments="stj:JsonElement" ExpressionText="enderco_code" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="stj:JsonElement" x:Key="out_planta">
-          <mva:VisualBasicReference x:TypeArguments="stj:JsonElement" ExpressionText="planta" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="stj:JsonElement" x:Key="out_commodities">
-          <mva:VisualBasicReference x:TypeArguments="stj:JsonElement" ExpressionText="commodities" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="stj:JsonElement" x:Key="out_tipo_requisition">
-          <mva:VisualBasicReference x:TypeArguments="stj:JsonElement" ExpressionText="tipo_requisiton" />
-        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_requisicao">[requisicao]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_id_planilha">[id_planilha]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_valor_maximo_robo">[valor_maximo_robo]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_template_sourcing">[template_sourcing]</OutArgument>
+        <OutArgument x:TypeArguments="stj:JsonElement" x:Key="out_urgencia">[urgencia]</OutArgument>
+        <OutArgument x:TypeArguments="stj:JsonElement" x:Key="out_endereco_code">[enderco_code]</OutArgument>
+        <OutArgument x:TypeArguments="stj:JsonElement" x:Key="out_planta">[planta]</OutArgument>
+        <OutArgument x:TypeArguments="stj:JsonElement" x:Key="out_commodities">[commodities]</OutArgument>
+        <OutArgument x:TypeArguments="stj:JsonElement" x:Key="out_tipo_requisition">[tipo_requisiton]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CoupaDataNecessidade workflow" sap:VirtualizedContainerService.HintSize="431,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Coupa\CoupaDataNecessidade.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CoupaDataNecessidade workflow" sap:VirtualizedContainerService.HintSize="451,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Coupa\CoupaDataNecessidade.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_requisicao">[requisicao]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CoupaDataEncerramento workflow" sap:VirtualizedContainerService.HintSize="431,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Coupa\CoupaDataEncerramento.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CoupaDataEncerramento workflow" sap:VirtualizedContainerService.HintSize="451,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Coupa\CoupaDataEncerramento.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:IfElseIf sap2010:Annotation.AnnotationText="Caso, o tipo de requisição seja diferente de orçamento, teremos que validar se já existe um sourcing identico criado. Se sim, devemos atualiza-lo." DisplayName="Else If" sap:VirtualizedContainerService.HintSize="431,160" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+    <ui:IfElseIf sap2010:Annotation.AnnotationText="Caso, o tipo de requisição seja diferente de orçamento, teremos que validar se já existe um sourcing identico criado. Se sim, devemos atualiza-lo." DisplayName="Else If" sap:VirtualizedContainerService.HintSize="451,473" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
       <ui:IfElseIf.ConditionBlocks>
         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
           <ui:IfElseIfBlock BlockType="If" Condition="[tipo_requisiton.Equals(&quot;Orçamento&quot;)]">
             <ui:IfElseIfBlock.Then>
-              <ui:LogMessage sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Tipo de requisição é igual orçamento, indo para criação de Sourcing.&quot;]" />
+              <ui:LogMessage sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Tipo de requisição é igual orçamento, indo para criação de Sourcing.&quot;]" />
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
           <ui:IfElseIfBlock BlockType="Else">
             <ui:IfElseIfBlock.Then>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GravarInformaçõesTabelaControle workflow" sap:VirtualizedContainerService.HintSize="344,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Excel\GravarInformaçõesTabelaControle.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GravarInformaçõesTabelaControle workflow" sap:VirtualizedContainerService.HintSize="347,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Excel\GravarInformaçõesTabelaControle.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_commodity">
-                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="commodities.ToString" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_urgencia">
-                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="urgencia.ToString" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_planta">
-                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="planta.ToString" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_endereco_code">
-                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="enderco_code.ToString" />
-                  </InArgument>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_requisicao">
-                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="requisicao" />
-                  </InArgument>
-                  <OutArgument x:TypeArguments="x:Boolean" x:Key="out_atualizar_sourcing">
-                    <mva:VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="atualizar_sourcing" />
-                  </OutArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_commodity">[commodities.ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_urgencia">[urgencia.ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_planta">[planta.ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_endereco_code">[enderco_code.ToString]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_requisicao">[requisicao]</InArgument>
+                  <OutArgument x:TypeArguments="x:Boolean" x:Key="out_atualizar_sourcing">[atualizar_sourcing]</OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </ui:IfElseIfBlock.Then>
@@ -258,7 +235,7 @@
       </ui:IfElseIf.ConditionBlocks>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
