@@ -1,4 +1,15 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CoupaDataEncerramento" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1829,2551" sap2010:WorkflowViewState.IdRef="CoupaDataEncerramento_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sg="clr-namespace:System.Globalization;assembly=mscorlib" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CoupaDataEncerramento" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sg="clr-namespace:System.Globalization;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_data_encerramento" Type="InArgument(s:DateTime)" />
+  </x:Members>
+  <this:CoupaDataEncerramento.out_data_encerramento>
+    <InArgument x:TypeArguments="s:DateTime" />
+  </this:CoupaDataEncerramento.out_data_encerramento>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1839,3341</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>CoupaDataEncerramento_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="40">
       <x:String>System.Activities</x:String>
@@ -44,7 +55,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="68">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -68,7 +79,6 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>UiPath.GSuite</AssemblyReference>
       <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
@@ -79,18 +89,15 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CoupaDataEncerramento" sap:VirtualizedContainerService.HintSize="617,2486" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CoupaDataEncerramento" sap:VirtualizedContainerService.HintSize="644,3276" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="data_encerramento_string" />
       <Variable x:TypeArguments="sg:CultureInfo" Name="cultura_Br" />
-      <Variable x:TypeArguments="x:Boolean" Name="eh_feriado">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="s:DateTime" Name="data_encerramento" />
+      <Variable x:TypeArguments="x:Boolean" Default="False" Name="eh_feriado" />
       <Variable x:TypeArguments="x:String" Name="teste_maluco" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -98,7 +105,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="575,193" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="602,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
@@ -119,24 +126,16 @@
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
             <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="s:DateTime">[data_encerramento]</OutArgument>
+              <OutArgument x:TypeArguments="s:DateTime">[out_data_encerramento]</OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
               <InArgument x:TypeArguments="s:DateTime">[Now.AddDays(-1)]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
-          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
-            <ui:AssignOperation.To>
-              <OutArgument x:TypeArguments="x:String">[teste_maluco]</OutArgument>
-            </ui:AssignOperation.To>
-            <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">[DateTime.Now.DayOfWeek.ToString]</InArgument>
-            </ui:AssignOperation.Value>
-          </ui:AssignOperation>
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <Sequence DisplayName="Pegar base de feriados" sap:VirtualizedContainerService.HintSize="575,68" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence DisplayName="Pegar base de feriados" sap:VirtualizedContainerService.HintSize="602,908" sap2010:WorkflowViewState.IdRef="Sequence_7">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="id_planilha" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt_feriados" />
@@ -144,11 +143,11 @@
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="IdPlanilhaGoogle" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="560,52" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+      <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="IdPlanilhaGoogle" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="560,51" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
         <ui:GetRobotAsset.Value>
           <OutArgument x:TypeArguments="x:String">[id_planilha]</OutArgument>
         </ui:GetRobotAsset.Value>
@@ -159,7 +158,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:GetRobotAsset>
-      <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" CredentialID="{x:Null}" CredentialSecret="{x:Null}" Folder="{x:Null}" SecureCredentialSecret="{x:Null}" TimeoutMS="{x:Null}" AuthenticationType="OAuthClientID" DataStoreLocation="Local disk" DisplayName="GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="560,52" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyPath="Google\wilsonsonstest-ce5450749885.json" KeyType="JSON" OAuthClient="UiPath" Password="notasecret" ServiceAccountEmail="wilsonsonstest@wilsonsonstest.iam.gserviceaccount.com" Services="Unselected" UserEmail="wilsonsonstest@wilsonsonstest.iam.gserviceaccount.com">
+      <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" CredentialID="{x:Null}" CredentialSecret="{x:Null}" Folder="{x:Null}" SecureCredentialSecret="{x:Null}" TimeoutMS="{x:Null}" AuthenticationType="OAuthClientID" DataStoreLocation="Local disk" DisplayName="GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="560,51" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyPath="Google\wilsonsonstest-ce5450749885.json" KeyType="JSON" OAuthClient="UiPath" Password="notasecret" ServiceAccountEmail="wilsonsonstest@wilsonsonstest.iam.gserviceaccount.com" Services="Unselected" UserEmail="wilsonsonstest@wilsonsonstest.iam.gserviceaccount.com">
         <uga:GSuiteApplicationScope.AuthenticationScopes>
           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
             <InArgument x:TypeArguments="x:String">https://www.googleapis.com/auth/spreadsheets</InArgument>
@@ -170,7 +169,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ug:SimpleObjectContainer" Name="GSuiteScope" />
             </ActivityAction.Argument>
-            <uga:ReadRange ContinueOnError="{x:Null}" GoogleSpreadsheet="{x:Null}" Range="{x:Null}" AuthScopesInvalid="False" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,217" sap2010:WorkflowViewState.IdRef="ReadRange_1" IncludeHeaders="True" Result="[dt_feriados]" SheetName="Holidays_Calendar" SpreadsheetId="[id_planilha]" />
+            <uga:ReadRange ContinueOnError="{x:Null}" GoogleSpreadsheet="{x:Null}" Range="{x:Null}" AuthScopesInvalid="False" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,213" sap2010:WorkflowViewState.IdRef="ReadRange_1" IncludeHeaders="True" Result="[dt_feriados]" SheetName="Holidays_Calendar" SpreadsheetId="[id_planilha]" />
           </ActivityAction>
         </uga:GSuiteApplicationScope.Body>
         <sap:WorkflowViewStateService.ViewState>
@@ -180,13 +179,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uga:GSuiteApplicationScope>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_feriados]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,638" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_feriados]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="560,634" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="feriado" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,522" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,519" sap2010:WorkflowViewState.IdRef="Sequence_9">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:String" Name="data_feriado" />
               </Sequence.Variables>
@@ -209,7 +208,7 @@
                   </scg:List>
                 </ui:MultipleAssign.AssignOperations>
               </ui:MultipleAssign>
-              <If Condition="[data_encerramento_string = data_feriado]" sap:VirtualizedContainerService.HintSize="484,290" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[data_encerramento_string = data_feriado]" sap:VirtualizedContainerService.HintSize="484,287" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
                   <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
                     <ui:MultipleAssign.AssignOperations>
@@ -241,33 +240,33 @@
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
     </Sequence>
-    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="575,2053" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="602,2034" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
       <ui:IfElseIf.ConditionBlocks>
         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
           <ui:IfElseIfBlock BlockType="If" Condition="[eh_feriado]">
             <ui:IfElseIfBlock.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="376,303" sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <Sequence sap:VirtualizedContainerService.HintSize="376,300" sap2010:WorkflowViewState.IdRef="Sequence_14">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:Comment sap:VirtualizedContainerService.HintSize="334,75" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Opções: Matar o processo e fazer um post poned e rodar a requisição no dia seguinte" />
-                <ui:LogMessage sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;EH FERIADo&quot;]" />
+                <ui:Comment sap:VirtualizedContainerService.HintSize="334,74" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Opções: Matar o processo e fazer um post poned e rodar a requisição no dia seguinte" />
+                <ui:LogMessage sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;EH FERIADO&quot;]" />
               </Sequence>
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
-          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[data_encerramento.DayOfWeek.ToString.Equals(&quot;Saturday&quot;)]">
+          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[out_data_encerramento.DayOfWeek.ToString.Equals(&quot;Saturday&quot;)]">
             <ui:IfElseIfBlock.Then>
               <ui:MultipleAssign sap:VirtualizedContainerService.HintSize="431,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                 <ui:MultipleAssign.AssignOperations>
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
                       <ui:AssignOperation.To>
-                        <OutArgument x:TypeArguments="s:DateTime">[data_encerramento]</OutArgument>
+                        <OutArgument x:TypeArguments="s:DateTime">[out_data_encerramento]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="s:DateTime">[data_encerramento.AddDays(5)]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime">[out_data_encerramento.AddDays(5)]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
                   </scg:List>
@@ -275,17 +274,17 @@
               </ui:MultipleAssign>
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
-          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[data_encerramento.DayOfWeek.ToString.Equals(&quot;Sunday&quot;)]">
+          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[out_data_encerramento.DayOfWeek.ToString.Equals(&quot;Sunday&quot;)]">
             <ui:IfElseIfBlock.Then>
               <ui:MultipleAssign sap:VirtualizedContainerService.HintSize="431,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
                 <ui:MultipleAssign.AssignOperations>
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
                       <ui:AssignOperation.To>
-                        <OutArgument x:TypeArguments="s:DateTime">[data_encerramento]</OutArgument>
+                        <OutArgument x:TypeArguments="s:DateTime">[out_data_encerramento]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="s:DateTime">[data_encerramento.AddDays(4)]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime">[out_data_encerramento.AddDays(4)]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
                   </scg:List>
@@ -293,17 +292,17 @@
               </ui:MultipleAssign>
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
-          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[data_encerramento.DayOfWeek.ToString.Equals(&quot;Friday&quot;)]">
+          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[out_data_encerramento.DayOfWeek.ToString.Equals(&quot;Friday&quot;)]">
             <ui:IfElseIfBlock.Then>
               <ui:MultipleAssign sap:VirtualizedContainerService.HintSize="431,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
                 <ui:MultipleAssign.AssignOperations>
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
                       <ui:AssignOperation.To>
-                        <OutArgument x:TypeArguments="s:DateTime">[data_encerramento]</OutArgument>
+                        <OutArgument x:TypeArguments="s:DateTime">[out_data_encerramento]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="s:DateTime">[data_encerramento.AddDays(6)]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime">[out_data_encerramento.AddDays(6)]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
                   </scg:List>
@@ -311,17 +310,17 @@
               </ui:MultipleAssign>
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
-          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[data_encerramento.DayOfWeek.ToString.Equals(&quot;Thursday&quot;)]">
+          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[out_data_encerramento.DayOfWeek.ToString.Equals(&quot;Thursday&quot;)]">
             <ui:IfElseIfBlock.Then>
               <ui:MultipleAssign sap:VirtualizedContainerService.HintSize="431,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
                 <ui:MultipleAssign.AssignOperations>
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
                       <ui:AssignOperation.To>
-                        <OutArgument x:TypeArguments="s:DateTime">[data_encerramento]</OutArgument>
+                        <OutArgument x:TypeArguments="s:DateTime">[out_data_encerramento]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="s:DateTime">[data_encerramento.AddDays(6)]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime">[out_data_encerramento.AddDays(6)]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
                   </scg:List>
@@ -329,17 +328,17 @@
               </ui:MultipleAssign>
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
-          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[data_encerramento.DayOfWeek.ToString.Equals(&quot;Wednesday&quot;)]">
+          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[out_data_encerramento.DayOfWeek.ToString.Equals(&quot;Wednesday&quot;)]">
             <ui:IfElseIfBlock.Then>
               <ui:MultipleAssign sap:VirtualizedContainerService.HintSize="431,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
                 <ui:MultipleAssign.AssignOperations>
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
                       <ui:AssignOperation.To>
-                        <OutArgument x:TypeArguments="s:DateTime">[data_encerramento]</OutArgument>
+                        <OutArgument x:TypeArguments="s:DateTime">[out_data_encerramento]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="s:DateTime">[data_encerramento.AddDays(6)]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime">[out_data_encerramento.AddDays(6)]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
                   </scg:List>
@@ -347,17 +346,17 @@
               </ui:MultipleAssign>
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
-          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[data_encerramento.DayOfWeek.ToString.Equals(&quot;Tuesday&quot;)]">
+          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[out_data_encerramento.DayOfWeek.ToString.Equals(&quot;Tuesday&quot;)]">
             <ui:IfElseIfBlock.Then>
               <ui:MultipleAssign sap:VirtualizedContainerService.HintSize="431,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_9">
                 <ui:MultipleAssign.AssignOperations>
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
                       <ui:AssignOperation.To>
-                        <OutArgument x:TypeArguments="s:DateTime">[data_encerramento]</OutArgument>
+                        <OutArgument x:TypeArguments="s:DateTime">[out_data_encerramento]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="s:DateTime">[data_encerramento.AddDays(6)]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime">[out_data_encerramento.AddDays(6)]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
                   </scg:List>
@@ -365,17 +364,17 @@
               </ui:MultipleAssign>
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
-          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[data_encerramento.DayOfWeek.ToString.Equals(&quot;Monday&quot;)]">
+          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[out_data_encerramento.DayOfWeek.ToString.Equals(&quot;Monday&quot;)]">
             <ui:IfElseIfBlock.Then>
               <ui:MultipleAssign sap:VirtualizedContainerService.HintSize="431,100" sap2010:WorkflowViewState.IdRef="MultipleAssign_10">
                 <ui:MultipleAssign.AssignOperations>
                   <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                     <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
                       <ui:AssignOperation.To>
-                        <OutArgument x:TypeArguments="s:DateTime">[data_encerramento]</OutArgument>
+                        <OutArgument x:TypeArguments="s:DateTime">[out_data_encerramento]</OutArgument>
                       </ui:AssignOperation.To>
                       <ui:AssignOperation.Value>
-                        <InArgument x:TypeArguments="s:DateTime">[data_encerramento.AddDays(4)]</InArgument>
+                        <InArgument x:TypeArguments="s:DateTime">[out_data_encerramento.AddDays(4)]</InArgument>
                       </ui:AssignOperation.Value>
                     </ui:AssignOperation>
                   </scg:List>

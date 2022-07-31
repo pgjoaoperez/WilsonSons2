@@ -1,13 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CoupaCriarEvento" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CoupaIrParaEvento" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_requisicao" Type="InArgument(x:String)" />
-    <x:Property Name="in_template_sourcing" Type="InArgument(x:String)" />
+    <x:Property Name="in_id_sourcing" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
   <sap:VirtualizedContainerService.HintSize>1839,2347</sap:VirtualizedContainerService.HintSize>
-  <sap2010:WorkflowViewState.IdRef>CoupaCriarEvento_1</sap2010:WorkflowViewState.IdRef>
+  <sap2010:WorkflowViewState.IdRef>CoupaIrParaEvento_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -31,19 +31,19 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-      <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>System.Runtime.InteropServices</x:String>
-      <x:String>System.Reflection</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
       <x:String>UiPath.UIAutomationNext.Activities</x:String>
       <x:String>System.Activities.DynamicUpdate</x:String>
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
-      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -64,8 +64,6 @@
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
@@ -76,17 +74,18 @@
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CoupaCriarEvento" sap:VirtualizedContainerService.HintSize="538,2282" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CoupaIrParaEvento" sap:VirtualizedContainerService.HintSize="538,2282" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -126,7 +125,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="462,1841" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="462,1841" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -134,7 +133,7 @@
             </sap:WorkflowViewStateService.ViewState>
             <uix:NCheckState Exists="{x:Null}" sap2010:Annotation.AnnotationText="Verificar se a página da requisição foi acessada com sucesso." DisplayName="Check App State 'General Info'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="420,839" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="f6709d00-9d57-4dab-b846-5941c3eb6000" Version="V1">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="More Actions and Send To RFQ" sap:VirtualizedContainerService.HintSize="376,592" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence DisplayName="More Actions and Send To RFQ" sap:VirtualizedContainerService.HintSize="376,592" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -142,7 +141,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Página carregada com sucesso.&quot;]" />
-                  <uix:NClick ClickType="Single" DelayAfter="1" DisplayName="Click 'More Actions'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f6709d00-9d57-4dab-b846-5941c3eb6000" Version="V1">
+                  <uix:NClick ClickType="Single" DisplayName="Click 'More Actions'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f6709d00-9d57-4dab-b846-5941c3eb6000" Version="V1">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/requisition_headers/3704" DesignTimeRectangle="1442, 653, 110, 33" ElementType="Button" FriendlyName="'More Actions'" FullSelectorArgument="&lt;webctrl parentid='approval-actions' tag='BUTTON' type='button' aaname=' More Actions ' innertext=' More Actions ' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='approval-actions' tag='BUTTON' type='button' aaname=' More Actions ' innertext=' More Actions ' class='btn btn-md btn-default black-text' check:text='More Actions' /&gt;" Guid="1cd9f229-1e35-4284-ba58-cd112e9f70d5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAlCAYAAACeVr0yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUpSURBVHhe7VtNViJJEJ6rzAHkJnMJwUPMEgp72zcQhDlFy4+4dqMiSCM4ojatjn/4t3ARk5GVkRWRVQXTi+mpmpf13veCLyMyIjK+KmVB/QL++l9cqUJ+fHyYT/7KwxUT8vHxEUajkcX+/r5HBnHz+TdY/P6rhRByNpvB0dERTKdTeHl5gff3d4+MAsXj3AqJTyKKeHl5qR1v72+hfTPW80xxEpK4FfLk5AQmkwm8vr565AAoJOdaSPxig/8PF4uFcHpkF4lC4oVCPj8/e+QEKCTnVkj8JqQDnhciwPNschKSuBDyafEET08K3mbeopCcSyFx0SMX0EIyLoR8eHiQeHS4C+9PXif8i34UkvtjQt4/3HubA6uFZFwIeXd/B3d3Ckvs3mYBCmsGn/aYfwzNUuSr7sp9P82eNGEjsb8fsL0qFDbVXsP3Ppkz9Zy4/9CikJxLIXFxBYSQpSaMyccHiIdGIdm+n4XxHxtRf2tV2EuIWYpdJSLuRSGT/BmBFpJxIeTtX7dwe6uwxPaqkViFtQ1oDML1UZMPsABBh+0bNoTIhc2eyNszN0ewGZiYAHoJ+zaao1g/0vYgMPsD06fog2yX6piYbvI69WH7ozjM05GxureEPhp8Ls653Zm5/mUWheRcCqkWb25vQqeBy3dpQNXwIBvNE70eCuwMEPcPtqWIhGIDRuhX+eXNoVBVBxo44hsEnSX90XBxv/28K+MdAQi635gvgF3WH8boeik5sG7YDwkZh+0/JQfN0/bLz8e4FpJxIeT1zfVKdM2hKp0uVLB4tavWo8+RX8aXGkOTYwj1YnJMmCtcGzZKIsbWKNZhaGJcyNomfq0CXRsTr33dqcjaLleQeRNy2FolqB9zHsXE5mDqRHP5MaCQnEshr9XiCnQD02CbDqQG1TZNbQ+ZH+PZMHkeFi9zRjG0FoeTyyJeK543pR8O01shUEKaNZGnX4cS+vGGYvuG2+bGSzu3c+YoJgI//ypoIRkXQs6/z2E+V0BLcHinEhYtt+YwMM2XimhLUDuS/vn3AdTWkZehw/O1yuG+7YHmHTMovcfUo7U4wjq2J+rP5ExEsQYDHd+Bsl5z+qHPiB2TJ+hYv+zP5KCcZj/NoryDnNVx+ivV1ZmRE45q4Y1BqJi6BLc/w1FIzqWQavHb/NtS2yahdhSnQ2uETQs/48X6sclzbMQND415rfiGY9xxvSjypPUTWrph0oDiyzjbDw1yXQmDnM5Uadv8sr94/1ZcWycSsk19mrzRHMy6tW0hftwvrRaScSHk1berlWjRob4gb5niCpVWgl/hcAuKFMOxvgX9xJwr9pk6Aja2DC3HR7mL9X649oXffBFsbeEvwtZhQn8pOaLeaC6sH7OH+uibGzWGpPMlAIXkXAp5pRZXoFUOC+pD/QOuceCIUlbNki9tD8Ldh+Jzv0G/Zobi5NWgofO9jhDFmhqu3dOHLft0KyEPUvpbmoMJ6cTzONs3IeV8SdBCMi6EvLi88MgJUEjOpZAXFzC7mGlL8DybXAvJuBDyfHbukROgkJzHhTw3Tm8zba2Qhgshz/4888gJUEjOY0JOz6Zwdmas55nlJCRxKyT+im4ynXjkBCgk51pI+l3r6eRU/0hZO73NtLVCGi6eSHxlYHw69sgBUEjOrZD47sfBwQH0+/3QOQ4Dvo6/ep5BTkISt0LihW9jHR4e6idT/5nFR9cjk9BCKnG1kMoKIfHCJxNf6ME/tQj8NuuRPSx9P5Jf/o3lfF2pQvorTxfA372mQHUmtb8gAAAAAElFTkSuQmCC" InformativeScreenshot="367e0efc352f74ade6fb0c931b243de5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Requisition #3704' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete" />
                     </uix:NClick.Target>
@@ -153,7 +152,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <uix:NClick ClickType="Single" DelayAfter="1" DisplayName="Click 'Send to RFQ'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f6709d00-9d57-4dab-b846-5941c3eb6000" Version="V1">
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Send to RFQ'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f6709d00-9d57-4dab-b846-5941c3eb6000" Version="V1">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/requisition_headers/3704" DesignTimeRectangle="1443, 745, 212, 25" ElementType="Text" FriendlyName="'Send to RFQ'" FullSelectorArgument="&lt;webctrl id='send_to_rfq' tag='A' aaname='Send to RFQ' innertext='Send to RFQ' /&gt;" FuzzySelectorArgument="&lt;webctrl id='send_to_rfq' tag='A' aaname='Send to RFQ' innertext='Send to RFQ' type='' class='' check:text='Send to RFQ' /&gt;" Guid="79d3fc2b-6241-4ff7-976d-4d1a2d17e7f4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANgAAAAdCAYAAADIBaLqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJNSURBVHhe7ZdhcoMgEEZ7p5yruYqTmySHyO9MjtEkd6CwEIUV1LZCavveDD8U1HXmey6+3W43cz6fDQCsh3PKuYVgABVAMICKIBhARRAMoCIIBlARBAOoCIIBVATBACrSWLCr6XY7s+vH3hw/wtTKPE57s3s/mkc4Xgdd/zC6S1hikWdn1uh69Lr9ad1q4fU0FMyHMwnRx9HsK0k2Jdj1YAN9uIajr+DfIZbJ4UXp7Gx0PCO31BBdY68yx/exhLBt2glWkMkFrcaXu6Vg+vysYJfOypX7sJTuD1vltR0sg+8GfsuUhDQI2h2i+USS0AFkLqzLhDy5f3+9r+15vhzwdQSbEvz78sNvpKFgFvlyTwRZ5odtUxI2EWx8nA91EKYQ8jTEXsxe/GJ3ceQF89KqLaJ7fjIK76WYkxO2RVvBIiRkErwhzO7c+B8tBHO0xYzDriSxTAV1LG583/G9BoK4o5EKOScJgv0fXibYEwmbBCre4sUjhHdSsExncZ1oiWCqay4RbHhOqFnJ8hPBpuZgezQTTEKXCU4cRheufLAtv6iDJSKHc0ufLehtqKtB6sndH7ZMuw4mQdbBVeFU3USCumiLqNYGSRYJpoX6xj+YvmZWMIvUEL2rPy7XDNuknWCCD2i8BdRh9aI859VXfkIwRx9Sd/5gQ18Kqwhh1/XzaV3lDlIQLEj6FGaJYI70XaOBZH+GxoLBEh6XK4L9ERAMoCIIBlARBAOoCIIBVATBACrSC3a/3xEMYGWcU84tBAOoAIIBVATBACriBbubT9xRZAKju/7KAAAAAElFTkSuQmCC" InformativeScreenshot="d0990a5b3a0e566cbb5275fe2c38239e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Requisition #3704' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete" />
                     </uix:NClick.Target>
@@ -188,27 +187,21 @@
             </uix:NCheckState>
             <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Create New Event'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="420,868" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="f6709d00-9d57-4dab-b846-5941c3eb6000" Version="V1">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Selecionar Template de Sourcing" sap:VirtualizedContainerService.HintSize="376,652" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Selecionar Template de Sourcing" sap:VirtualizedContainerService.HintSize="376,652" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Selecionando template de sourcing.&quot;]" />
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="2" DelayBetweenKeys="0.1" DisplayName="Type Into 'Create from Template'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="f6709d00-9d57-4dab-b846-5941c3eb6000" Text="[in_template_sourcing]" Version="V1">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT existing_event_na…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="f6709d00-9d57-4dab-b846-5941c3eb6000" Text="[in_id_sourcing]" Version="V1">
                     <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/requisition_headers/3704" DesignTimeRectangle="1087, 704, 242, 29" ElementType="InputBox" FriendlyName="'INPUT event_name_templa…'" FullSelectorArgument="&lt;webctrl id='event_name_template' tag='INPUT' type='text' name='event_name_template' title='Requisition*' /&gt;" FuzzySelectorArgument="&lt;webctrl id='event_name_template' tag='INPUT' type='text' name='event_name_template' title='Requisition #3704' class='s-createFromTemplateSearch' aaname='' /&gt;" Guid="0e962471-51e8-49c2-b686-508b0decf268" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPYAAAAhCAYAAADqKVZfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKgSURBVHhe7Z0xj+IwEEbvT1NSUlJS0lHSUVJSIQokGmoaJDoqKH36EB83scxyYbOH4ntPspJ47PFE8ltrdyX4lQCgOhAboEIaYh+Px7TdbtN6vabRaD1pclbuRh5iK7Df79Plcrn3AEAfkLNyN8r9EFvWIzVAP5G7ctg8xNaRDgD9JTqM2ACVgNgAFYLYABWC2AAVgtgAFdJa7OVymQaDQbHtdrt0Pp/TaDS63b+D8k8mk3S9Xu89f1CfYu/m/i6Hw+H2brq+4tO1wv/NW2LPZrP7U/cgNsD36VzseGLrfjwep8Vi8TjVFVO/8XjFhsNhmk6nRbEtivOojlJ/nOv1V6vVLbfjp9OpsaZF1dXjnS++ay62rs4bc71TK0CX/LjYuvcG9sb2fMe98S3Ksw3v+T4F/ez5Qrnz/M7n5yhzHJ+v7/wxrvm6emxeSz73b2sF6JK3xPaJE5s3bElsb26hcd786ldc40yM5+Sy6JqPVS6duhKvtH4uU8wRxTWxxlI8EmtvWytAl/yTE9ubW8TNX5K4JIDJZdH80g8Zn8jPxNY8E9fTHImmeSbKHO+N1/DaztW2VoAu6b3Yz8aKnxQ7Cu18sZ62tQJ0yUfFVr/iUaSvBMhlKc2PlNZ/JbbG62riGjEe55lYe9taAbrko2J781s0CRP/eJWTy+LnWE8UqLT+K7G1vvOV6lM+i+11hJ51ejtX21oBuuSjYguPkRS6zufzRjxH8zXWNcT5zmFRSuu/Elvj9S8354vvGsUWinmccmw2m8bvzG1qBeiS1mLXTC4uQF9B7ABiQy0gdgCxoRYQG6BCEBugQhAboEKKYvPxwwD95enHD/OFAQD9RM4+/cIAoYCs15FOo9H60eRslFo0xAaAOkBsgApBbIDqSOk3Fr9dQxc+ok4AAAAASUVORK5CYII=" InformativeScreenshot="8463f5c7e4da55050b2a2cbd6ddf3506.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Requisition #3704' /&gt;" SearchSteps="Selector" Visibility="Interactive" WaitForReadyArgument="Complete">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target DesignTimeRectangle="1087, 421, 242, 33" ElementType="Text" FriendlyName="'Create from Template'" FullSelectorArgument="&lt;webctrl parentid='popup_container' tag='H2' aaname='Create from Template' innertext='Create from Template' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='popup_container' tag='H2' aaname='Create from Template' innertext='Create from Template' type='' class='title' check:text='Create from Template' /&gt;" ImageBase64="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" SearchSteps="Selector" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
+                      <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/requisition_headers/3703" DesignTimeRectangle="1429, 681, 242, 29" ElementType="InputBox" FriendlyName="'INPUT existing_event_na…'" FullSelectorArgument="&lt;webctrl id='existing_event_name' tag='INPUT' type='text' name='existing_event_name' parentclass='search' placeholder='Find event' /&gt;" FuzzySelectorArgument="&lt;webctrl id='existing_event_name' tag='INPUT' type='text' name='existing_event_name' parentclass='search' placeholder='Find event' class='s-addToExistingEventSearch' aaname='' /&gt;" Guid="98968b1e-bae7-4c2d-80cf-3cef23cffda6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPYAAAAhCAYAAADqKVZfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIzSURBVHhe7d29bvIwAEbh3jQjIyMjIxsjGyNXwITEwsyCxMYEo6sX8UaOSxJ+CsTWeSQLiu3gSj3kkz6p/QkAikPYQIFqYe/3+7Ber8NqtWIwGJkMNat2Y1XYmthut+F0Ol1fAZADNat247irsFU9UQN5Urtq2KqwdUsHkK+4YcIGCkHYQIEIGygQYQMFImygQIQNFOjhsM/nc5hMJmEwGPwZo9EoHI/HsNvtLs/1+IzZbHYZfaPvbTweP/19AZ/ydNibzeb6yv8jbOA1bwk7vmNrKIb5fF7d2bVf1zGtGQ6H1V1f821hKzCt8/W81mdbLpeXr03zfq1pr7SdNd33zg824FUfCVvROiAH4tA87+vpMQ0u5v1en8asR8coWu+7bNferrPG1wL67OmwfefyUBD+gddjHLafm8JxPGmIEs+ntD6d07UVnMJL308R+/qP7pX4LISNXHzkjt0WS/zcbgVoej39UNHQeyi89C6s9fHztr1dZyVs5CLLsJvmTPt1xsPhUAuxa2/XWQkbufh62I5Q17V4PnVrfcrvuVgsamu79nadlbCRi6+HrVg07+vpUf88bgrb6xWppcH6jOl1uvbec1bCRg6+HrZozv/dpWtPp9PafCpe7z2O2hSs5tJztu2956x6rn3xhwPQNw+HDaD/CBsoEGEDBSJsoECEDRSIsIEC3Qyb3ysO5Kvx94rzl0CAPKnZxr8EIppQ9bqlMxiMPIaajaOWWtgAykDYQHFC+AXdb9dxwtEuyQAAAABJRU5ErkJggg==" InformativeScreenshot="298cce56b12c0c3cc42abdf566d5105c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Requisition #3703' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Visibility="Interactive" WaitForReadyArgument="Complete" />
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <uix:NClick ClickType="Single" DisplayName="Click 'Create'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f6709d00-9d57-4dab-b846-5941c3eb6000" Version="V1">
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Create'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f6709d00-9d57-4dab-b846-5941c3eb6000" Version="V1">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/requisition_headers/3704" DesignTimeRectangle="1087, 745, 66, 16" ElementType="Text" FriendlyName="'Create'" FullSelectorArgument="&lt;webctrl id='add_to_template' tag='A' aaname='Create' innertext='Create' /&gt;" FuzzySelectorArgument="&lt;webctrl id='add_to_template' tag='A' aaname='Create' innertext='Create' type='' class='create_new_event_popup_item s-createFromTemplateSearchSubmit' check:text='Create' /&gt;" Guid="81cd81e6-4428-41f0-a083-426c60b633a3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAUCAYAAAAwaEt4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMQSURBVFhH5ZjPThNRFMZ5A59An8A3IC7cGRNEo1GRBDSGKMaw1QQNosG/aHQromlsAWlRU2LcKNCwcWMxNeACgwiFWgFpLSgxmmO/65zr7eXMdBLqgvFLTi5z77ln5vvNGWbSKhL05dsi9SS76dijfVRzv9o1mqIHKZK8R58K887O4GgdmNncNN0YaRNBuEVnop3mv6adCsFQCZjCWp7ujF4WzfeMdVMqk1SjtH4rcYkWVz87lTa/SsAMpCKiacTbzJjKwSitI2KpsMoJgjSYD0vv6dTjetEwwg+YlqeNNFN8FIMgDWZwPCqa5fADBjE4EVV5ktIrP2lbb5qquqZ1xKZWndV/I5xze2yOXmXXnBl/0mA6Ry6IRjn8grk6dE7l2QIAGwQudktohtqTOWem8towmJMDddpcx4uz6nVtRtZ5JWO015DPe4/27VV5prhTpO7AHNaQg6iOZ6hpdFFBxN/5H7/0fu6yQy8XnN1/xNA5zHrmPj5/uXqQBlMX3qXNcXf4ldlFtQ92OLN/ZZr3El+weaE8x6YACsC4yzCPruOOsGvg2OyYcvVYFQezRwCDk/Ld95J90RD22ncUJmEW+ZKQ7wbGbz0N5kTssDanHqXi94oZ2UJG5WG018xHqbGvVuWZ2ggYmOCWNwN5phGYQ+fwuhsYv/U0mHJfu9xFZndIcWWoVeWZglH7xJLcwNh32JQJhPeZeyQwXvVYGky8Qq/r+Hi/yjMlGWbhgrf2pNUo5ZXrNunR8ALjt3s1mKmlSWoeOCKaRfgBc/pJA31cnlJ5tmDWvKsQ323ThA2G52CIZZqzjeIY53EDU64eS4OB8EkvGUb4AdP/JqRy3MQg+Lm2QUlgIHufaQIjjnkNQGAUdVAPwhzWGIZXPVYJmNz3Zbo92iGaxj9ZQMEord9MXKSFlaxTafOrBAyER+Ha8HnRvFtcH26jufysUyEYWgcGws8H4dd3qaG3RgTBcbz/AD0s5s0HDAokgmFNLrxTv9CdedZM9ZHdCsb+0E5qfd5SBNdFE9mUkxk8eYL5f0X0GwBGX2cNdShuAAAAAElFTkSuQmCC" InformativeScreenshot="15aa287fa3a52e612bff01129de605b6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Requisition #3704' /&gt;" SearchSteps="Selector, Image" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                      <uix:TargetAnchorable BrowserURL="https://wilsonsons-test.coupahost.com/requisition_headers/3704" DesignTimeRectangle="1429, 718, 66, 16" ElementType="Text" FriendlyName="'Create'" FullSelectorArgument="&lt;webctrl id='add_to_existing_event' tag='A' aaname='Create' innertext='Create' parentclass='add' /&gt;" FuzzySelectorArgument="&lt;webctrl id='add_to_existing_event' tag='A' aaname='Create' innertext='Create' parentclass='add' type='' class='create_new_event_popup_item  s-addToExistingEventSearchSubmit' check:text='Create' /&gt;" Guid="41d7c967-11af-4386-8003-f5e182ee9d19" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAUCAYAAAAwaEt4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKtSURBVFhH5ZdPaxNRFMX7DfwE+kWq3btQ6x9wW617txbdCAZd+G8lkdIUN1GjC9FWS02ybLNKoa7SiIgEQnGjqCCiPHum97zceblvZkrtIvHApTPz7rvzzm/uvEknXETN9yvu0rNz7kRlMjNma2ddo/taZo2PTDDzrfsmhKx42Lons8dDQ2BiUC6/mHGb/XYSOLZyyut3pcroKwWm0X1jGkZUNxYkyyXHVg6i3l2WrNFWCsxsLb6nFAVzsXZGskZbHkxWtyCKgkG83VqSzGE9//DDTcx/9HHkcc/1vv+W0YMR7jn5su++/vojV/LlwdxqXjNNMvYCptSYk8y0zjc+D4G43v7iDj365FrbP+XKv9e+wOCzS2PYXKvthVRg06VwHI7rDXnmybRkDoTFxboDwBAQAB1f2U4CHcXrYafhXAt5etyap++fV8+DmV6c8sbe9TfkanFhDuefWjwmVwfS5rMEMOggdBKFRWtTyDlc7fkuQ13dETRNs/gbjmfVgw4EzMnKUbm6KywIC9NmYwoXybk0SaFWDDQMw7gFpmi9+Ku0s4/o0LBwHI7rV+nC09OSuav9gKFJ3faMEAzq63ELTNF6HszN5lVvzAqYp3Bs5TBK9SuSORBuGnvCWjEw4RPWIhC+HlkdU6Qe5MHUt5ZNk4y9gFntvJLMgbAQLjwUjHHhIZi8buO4NpoFJq8e5cFA+HFmGUUUBWN9kSh0TAiHT5smQjAQxvQnXZsLjfJc19RgeB6rR6XA4Oe8ZRZRFIzVLVoEwQhBWWCgcJ42gVwY5Vil8y0xyleXHaRhZNWDUmCg8tod0zA2V2y6CL3R6niwdluqjL6GwEDldRtOVowTFMgEA612lpLPrgVBB/aUvNdnFBUFQ+EfwlJ9LgGgYdzY+SSPIxAqF8z/Kef+Ak3sUXNPbaaZAAAAAElFTkSuQmCC" InformativeScreenshot="1c45907fc152164b4dc0571d6ca8e0ae.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Requisition #3704' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive" WaitForReadyArgument="Complete" />
                     </uix:NClick.Target>
                   </uix:NClick>
                 </Sequence>

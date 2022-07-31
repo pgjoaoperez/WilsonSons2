@@ -1,0 +1,15 @@
+﻿{
+  "Id": "TKIeE-26K0WqZopuG4Dheg",
+  "Reference": "FB9c7qXAV0OOXtfk_NLfvg/TKIeE-26K0WqZopuG4Dheg",
+  "ParentRef": "FB9c7qXAV0OOXtfk_NLfvg/ibVAZG2Wg0WNr03BANlTrw",
+  "Name": "CoupaError",
+  "Type": "Screen",
+  "Created": "2022-07-31T20:14:29.6256669Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.4.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-31T20:14:39.6486336Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.4.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

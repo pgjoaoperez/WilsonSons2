@@ -1,0 +1,16 @@
+﻿{
+  "Id": "q9mEeLpkZUm9sfTNxG1pRA",
+  "Reference": "FB9c7qXAV0OOXtfk_NLfvg/q9mEeLpkZUm9sfTNxG1pRA",
+  "ParentRef": "FB9c7qXAV0OOXtfk_NLfvg/TKIeE-26K0WqZopuG4Dheg",
+  "Name": "CoupaAlgoAconteceu",
+  "Type": "Element",
+  "TaxonomyType": "Elemento",
+  "Created": "2022-07-31T20:14:48.9783453Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.4.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-07-31T20:15:12.0969998Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.4.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

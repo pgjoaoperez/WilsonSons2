@@ -16,7 +16,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1549,1687</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1839,3647</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CoupaRequisitions_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
@@ -128,7 +128,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="CoupaRequisitions" sap:VirtualizedContainerService.HintSize="568,1622" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CoupaRequisitions" sap:VirtualizedContainerService.HintSize="610,3582" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="stj:JsonElement" Name="obj" />
       <Variable x:TypeArguments="x:Int32" Name="status_get" />
@@ -146,7 +146,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Traz os itens da requisição." DisplayName="Get Http" sap:VirtualizedContainerService.HintSize="526,908" sap2010:WorkflowViewState.IdRef="Sequence_11">
+    <Sequence sap2010:Annotation.AnnotationText="Traz os itens da requisição." DisplayName="Get Http" sap:VirtualizedContainerService.HintSize="568,908" sap2010:WorkflowViewState.IdRef="Sequence_11">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -154,7 +154,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" AuthenticationType="None" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://wilsonsons-test.coupahost.com/api/requisitions/&quot;+in_requisicao+&quot;?filter=rpa_req_comprador&quot;]" sap:VirtualizedContainerService.HintSize="484,57" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" OAuth2Token="eyJ0eXAiOiJhdCtKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjRmOjMzOmI3OmY3OjVmOjg4OjQ3OmRhOjAzOmVmOjkzOjQ1OmU5OmNjOmZiOjg3In0.eyJpc3MiOiJodHRwczovL3dpbHNvbnNvbnMtdGVzdC5jb3VwYWhvc3QuY29tIiwiaWF0IjoxNjU5MDU0ODkwLCJleHAiOjE2NTkxNDEyOTAsInN1YiI6IjRkZTE3MGQzOGY1NWU5MWFjODdkNGJmNmE2OGM2NzdkIiwianRpIjoiNDdlYTRiZWItYTQyMS00YjFkLWExZjgtODUxZDA2YTA4NDBkIiwiY2xpZW50X2lkIjoiNGRlMTcwZDM4ZjU1ZTkxYWM4N2Q0YmY2YTY4YzY3N2QiLCJzY29wZSI6ImNvcmUucmVxdWlzaXRpb24ucmVhZCBjb3JlLnJlcXVpc2l0aW9uLndyaXRlIiwiYXVkIjpbImNvcmUiXX0.cNhOawke1XtSDYQDCZVgiO2wSZswnT3BllF08kBVIw_sN-IKoEqTB9wcO9-XiXtX7qGSneFGZ7xLgMn2vXEFs1eWA8ZmYunab5GKN96IiOiiHIHtM6Fa4XWpkTfM4WCntIroP5xCJtZQTFk6n5EjoHfx3kf0247iN8A3-iMhLVQ6d4VwT2Zu5awSwEBzvhkOuFMzxtG-4K7Qpmjf3oqxyNkFaxfNXSG2bQJGgac44mtfqWsNfQB0J3-Y09ZkAQ_jzUky4Obcy7YZBhatnQIE3qFJHiFPo1Cm-Tkg2kBrZi0hMENwmoD8qjqTLiClczGQzs-5XTrlvxaiPE_eI_ZOFg" Result="[retorno_requisicao]" StatusCode="[status_get]" TimeoutMS="15000">
+      <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" AuthenticationType="None" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https://wilsonsons-test.coupahost.com/api/requisitions/&quot;+in_requisicao+&quot;?filter=rpa_req_comprador&quot;]" sap:VirtualizedContainerService.HintSize="484,57" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" OAuth2Token="eyJ0eXAiOiJhdCtKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjRmOjMzOmI3OmY3OjVmOjg4OjQ3OmRhOjAzOmVmOjkzOjQ1OmU5OmNjOmZiOjg3In0.eyJpc3MiOiJodHRwczovL3dpbHNvbnNvbnMtdGVzdC5jb3VwYWhvc3QuY29tIiwiaWF0IjoxNjU5MjkzMzE2LCJleHAiOjE2NTkzNzk3MTYsInN1YiI6IjRkZTE3MGQzOGY1NWU5MWFjODdkNGJmNmE2OGM2NzdkIiwianRpIjoiODdjNjU5ZDQtOTFhMi00Y2NiLTk2NDctOTJkMDNjMTYyM2Y5IiwiY2xpZW50X2lkIjoiNGRlMTcwZDM4ZjU1ZTkxYWM4N2Q0YmY2YTY4YzY3N2QiLCJzY29wZSI6ImNvcmUucmVxdWlzaXRpb24ucmVhZCBjb3JlLnJlcXVpc2l0aW9uLndyaXRlIiwiYXVkIjpbImNvcmUiXX0.gFGmaBtRQq_pZm-db9o7bZd-SABQDsJKhLw6WDOfPsiodLXNZxAhCC_l2Axk3MM5Cu_xyD_aycEoqwH7HA3GvSf_tKqfSkH0QxT-wjSHhaQFG6G9zdpxF-L10y2oN0Ez1xrCqciEBqailTVvgibf43GRh8WI4cBUq2ObBWYccE4wKrUU6i2nsvXYHgCJi-7FBCWkqpx9xjMJty6NN5HVDLFt1lHsbjIUgutjzqNQSw2HiNVVBdlxAo8jiXyTuwdoGJiy_-yvn01igBEj0dOQs_JT7om7XsnAtohI10kKHtFH-huMr7-lNnEosygVw4Q-ZKOmDEcMbx7v9yZq1BQu0g" Result="[retorno_requisicao]" StatusCode="[status_get]" TimeoutMS="15000">
         <ui:HttpClient.Attachments>
           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
         </ui:HttpClient.Attachments>
@@ -246,7 +246,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:MultipleAssign>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Verifica se a requisição possui Tag XXX." DisplayName="Tag Retirado?" sap:VirtualizedContainerService.HintSize="526,108" sap2010:WorkflowViewState.IdRef="Sequence_13">
+    <Sequence sap2010:Annotation.AnnotationText="Verifica se a requisição possui Tag XXX." DisplayName="Tag Retirado?" sap:VirtualizedContainerService.HintSize="568,108" sap2010:WorkflowViewState.IdRef="Sequence_13">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -388,7 +388,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:IfElseIf>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Verifica se a requisição possui todas as commodities iguais." DisplayName="Commodities Iguais?" sap:VirtualizedContainerService.HintSize="526,108" sap2010:WorkflowViewState.IdRef="Sequence_19">
+    <Sequence sap2010:Annotation.AnnotationText="Verifica se a requisição possui todas as commodities iguais." DisplayName="Commodities Iguais?" sap:VirtualizedContainerService.HintSize="568,108" sap2010:WorkflowViewState.IdRef="Sequence_19">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_commodities" />
       </Sequence.Variables>
@@ -481,7 +481,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Verifica se o valor da requisição está dentro do limite aceito pelo robô." DisplayName="Valor Requisição" sap:VirtualizedContainerService.HintSize="526,123" sap2010:WorkflowViewState.IdRef="Sequence_23">
+    <Sequence sap2010:Annotation.AnnotationText="Verifica se o valor da requisição está dentro do limite aceito pelo robô." DisplayName="Valor Requisição" sap:VirtualizedContainerService.HintSize="568,123" sap2010:WorkflowViewState.IdRef="Sequence_23">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="valor_maximo_robo" />
         <Variable x:TypeArguments="x:String" Name="total" />
@@ -539,26 +539,26 @@
         </If.Then>
       </If>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Consulta a base e verifica se existe pelo menos um fornecedor." DisplayName="Consultar vendor_list" sap:VirtualizedContainerService.HintSize="526,123" sap2010:WorkflowViewState.IdRef="Sequence_22">
+    <Sequence sap2010:Annotation.AnnotationText="Consulta a base e verifica se existe pelo menos um fornecedor." DisplayName="Consultar vendor_list" sap:VirtualizedContainerService.HintSize="568,2083" sap2010:WorkflowViewState.IdRef="Sequence_22">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_vendor_list" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Ler Vendor List" sap:VirtualizedContainerService.HintSize="526,719" sap2010:WorkflowViewState.IdRef="Sequence_27">
+      <Sequence DisplayName="Ler Vendor List" sap:VirtualizedContainerService.HintSize="526,708" sap2010:WorkflowViewState.IdRef="Sequence_27">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,109" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Consultando vendor_list&quot;]" />
-        <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" CredentialID="{x:Null}" CredentialSecret="{x:Null}" Folder="{x:Null}" SecureCredentialSecret="{x:Null}" TimeoutMS="{x:Null}" AuthenticationType="OAuthClientID" DataStoreLocation="Local disk" DisplayName="GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="434,329" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyPath="Google\wilsonsonstest-ce5450749885.json" KeyType="JSON" OAuthClient="UiPath" Password="notasecret" ServiceAccountEmail="wilsonsonstest@wilsonsonstest.iam.gserviceaccount.com" Services="Unselected" UserEmail="wilsonsonstest@wilsonsonstest.iam.gserviceaccount.com">
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Consultando vendor_list&quot;]" />
+        <uga:GSuiteApplicationScope Account="{x:Null}" ApiKey="{x:Null}" ContinueOnError="{x:Null}" CredentialID="{x:Null}" CredentialSecret="{x:Null}" Folder="{x:Null}" SecureCredentialSecret="{x:Null}" TimeoutMS="{x:Null}" AuthenticationType="OAuthClientID" DataStoreLocation="Local disk" DisplayName="GSuite Application Scope" HasDomainWideAccesss="False" sap:VirtualizedContainerService.HintSize="434,324" sap2010:WorkflowViewState.IdRef="GSuiteApplicationScope_1" KeyPath="Google\wilsonsonstest-ce5450749885.json" KeyType="JSON" OAuthClient="UiPath" Password="notasecret" ServiceAccountEmail="wilsonsonstest@wilsonsonstest.iam.gserviceaccount.com" Services="Unselected" UserEmail="wilsonsonstest@wilsonsonstest.iam.gserviceaccount.com">
           <uga:GSuiteApplicationScope.AuthenticationScopes>
             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
               <InArgument x:TypeArguments="x:String">https://www.googleapis.com/auth/spreadsheets</InArgument>
@@ -569,13 +569,13 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="ug:SimpleObjectContainer" Name="GSuiteScope" />
               </ActivityAction.Argument>
-              <uga:ReadRange ContinueOnError="{x:Null}" GoogleSpreadsheet="{x:Null}" Range="{x:Null}" AuthScopesInvalid="False" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,217" sap2010:WorkflowViewState.IdRef="ReadRange_1" IncludeHeaders="True" Result="[dt_vendor_list]" SheetName="List" SpreadsheetId="[in_id_planilha]" />
+              <uga:ReadRange ContinueOnError="{x:Null}" GoogleSpreadsheet="{x:Null}" Range="{x:Null}" AuthScopesInvalid="False" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,213" sap2010:WorkflowViewState.IdRef="ReadRange_1" IncludeHeaders="True" Result="[dt_vendor_list]" SheetName="List" SpreadsheetId="[in_id_planilha]" />
             </ActivityAction>
           </uga:GSuiteApplicationScope.Body>
         </uga:GSuiteApplicationScope>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,109" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[dt_vendor_list.Rows.Count]" />
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[dt_vendor_list.Rows.Count]" />
       </Sequence>
-      <Sequence DisplayName="Procurar Fornecedores" sap:VirtualizedContainerService.HintSize="526,1120" sap2010:WorkflowViewState.IdRef="Sequence_28">
+      <Sequence DisplayName="Procurar Fornecedores" sap:VirtualizedContainerService.HintSize="526,1112" sap2010:WorkflowViewState.IdRef="Sequence_28">
         <Sequence.Variables>
           <Variable x:TypeArguments="sd:DataTable" Name="dt_fornecedores" />
           <Variable x:TypeArguments="x:String" Name="commodities_filtro" />
@@ -609,7 +609,7 @@
             </scg:List>
           </ui:MultipleAssign.AssignOperations>
         </ui:MultipleAssign>
-        <ui:FilterDataTable DataTable="[dt_vendor_list]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="484,162" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_fornecedores]" SelectColumnsMode="Keep">
+        <ui:FilterDataTable DataTable="[dt_vendor_list]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="484,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_fornecedores]" SelectColumnsMode="Keep">
           <ui:FilterDataTable.Filters>
             <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
               <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
@@ -636,8 +636,8 @@
             </scg:List>
           </ui:FilterDataTable.SelectColumns>
         </ui:FilterDataTable>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,109" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;Existem : &quot; + dt_fornecedores.Rows.Count.ToString + &quot; fornecedores&quot;]" />
-        <If Condition="[dt_fornecedores.Rows.Count.Equals(0)]" sap:VirtualizedContainerService.HintSize="484,250" sap2010:WorkflowViewState.IdRef="If_6">
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;Existem : &quot; + dt_fornecedores.Rows.Count.ToString + &quot; fornecedores&quot;]" />
+        <If Condition="[dt_fornecedores.Rows.Count.Equals(0)]" sap:VirtualizedContainerService.HintSize="484,247" sap2010:WorkflowViewState.IdRef="If_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
