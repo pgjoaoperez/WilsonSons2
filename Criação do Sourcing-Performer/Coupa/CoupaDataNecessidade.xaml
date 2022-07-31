@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1839,2253</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1839,1619</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CoupaDataNecessidade_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -76,7 +76,7 @@
       <AssemblyReference>NPOI</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CoupaDataNecessidade" sap:VirtualizedContainerService.HintSize="604,2188" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Esta sequência traz as informações da requisição para verificar a data de necessidade, se estiver for menor que 6, devemos fazer uma alteração." DisplayName="CoupaDataNecessidade" sap:VirtualizedContainerService.HintSize="604,1554" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="retorno_requisicao" />
       <Variable x:TypeArguments="x:Int32" Name="status_get" />
@@ -87,16 +87,18 @@
       <Variable x:TypeArguments="s:DateTime" Name="data_atual" />
       <Variable x:TypeArguments="x:String" Name="data_necessidade_regex" />
       <Variable x:TypeArguments="x:Boolean" Name="atualizar_data_necessidade" />
+      <Variable x:TypeArguments="x:String" Name="data_necessidade_str" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Traz os itens da requisição." DisplayName="Get Http" sap:VirtualizedContainerService.HintSize="562,815" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence sap2010:Annotation.AnnotationText="Esta sequência traz as informações da requisição." DisplayName="Get Http" sap:VirtualizedContainerService.HintSize="562,108" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
@@ -170,9 +172,9 @@
       </ui:MultipleAssign>
     </Sequence>
     <ui:Matches BuilderPattern="\d{4}\-\d{2}\-\d{2}" sap:VirtualizedContainerService.HintSize="562,59" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[data.ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;\\d{4}\\-\\d{2}\\-\\d{2}&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exatamente&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="\d{4}\-\d{2}\-\d{2}" RegexOption="IgnoreCase, Compiled" Result="[resultado_data_necessidade]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="562,162" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="562,193" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
       <ui:MultipleAssign.AssignOperations>
-        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">[data_necessidade_regex]</OutArgument>
@@ -189,6 +191,14 @@
               <InArgument x:TypeArguments="s:DateTime">[Convert.ToDateTime(data_necessidade_regex)]</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[data_necessidade_str]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[data_necessidade.AddDays(6).ToString("dd/MM/yyyy")]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="s:DateTime">[data_atual]</OutArgument>
@@ -200,7 +210,7 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <If Condition="[DateDiff(DateInterval.Day, data_necessidade, data_atual) &lt; 6]" sap:VirtualizedContainerService.HintSize="562,940" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[DateDiff(DateInterval.Day, data_atual, data_necessidade) &lt; 6]" sap:VirtualizedContainerService.HintSize="562,940" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -235,7 +245,7 @@
                     <OutArgument x:TypeArguments="x:String">[body]</OutArgument>
                   </ui:AssignOperation.To>
                   <ui:AssignOperation.Value>
-                    <InArgument x:TypeArguments="x:String">[body.Replace("@data_necessidade_mais_seis", data_necessidade.AddDays(6).ToString)]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[body.Replace("@data_necessidade_mais_seis", data_necessidade_str)]</InArgument>
                   </ui:AssignOperation.Value>
                 </ui:AssignOperation>
               </scg:List>

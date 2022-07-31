@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:stj="clr-namespace:System.Text.Json;assembly=System.Text.Json" xmlns:this="clr-namespace:" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Process" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:stj="clr-namespace:System.Text.Json;assembly=System.Text.Json" xmlns:this="clr-namespace:" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
@@ -124,7 +124,7 @@
       <Variable x:TypeArguments="stj:JsonElement" Name="commodities" />
       <Variable x:TypeArguments="stj:JsonElement" Name="tipo_requisiton" />
       <Variable x:TypeArguments="x:Boolean" Name="atualizar_sourcing" />
-      <Variable x:TypeArguments="s:DateTime" Name="data_encerramento" />
+      <Variable x:TypeArguments="x:String" Name="data_encerramento" />
       <Variable x:TypeArguments="x:String" Name="id_sourcing" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -206,7 +206,9 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CoupaDataEncerramento workflow" sap:VirtualizedContainerService.HintSize="713,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Coupa\CoupaDataEncerramento.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="s:DateTime" x:Key="out_data_encerramento">[data_encerramento]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_data_encerramento">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="data_encerramento" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:IfElseIf sap2010:Annotation.AnnotationText="Caso, o tipo de requisição seja diferente de orçamento, teremos que validar se já existe um sourcing identico criado. Se sim, devemos atualiza-lo." DisplayName="Else If" sap:VirtualizedContainerService.HintSize="713,473" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
@@ -254,11 +256,21 @@
       <If.Else>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke CoupaNovoEvento workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Coupa\CoupaNovoEvento.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="x:String" x:Key="in_requisicao">[requisicao]</InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="in_template_sourcing">[template_sourcing]</InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="in_commodity">[commodities.ToString]</InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="in_planta">[planta.ToString]</InArgument>
-            <InArgument x:TypeArguments="s:DateTime" x:Key="in_data_encerramento">[data_encerramento]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_requisicao">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="requisicao" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_template_sourcing">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="template_sourcing" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_commodity">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="commodities.ToString" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_planta">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="planta.ToString" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_data_encerramento">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="data_encerramento" />
+            </InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
       </If.Else>
